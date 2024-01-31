@@ -21,8 +21,8 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "URLR"
-VERSION = "0.0.1"
+NAME = "urlr"
+VERSION = "0.0.2"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
@@ -34,11 +34,11 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Developer API - URLR",
+    description="Python client for URLR",
     author="URLR",
     author_email="contact@urlr.me",
     url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "Developer API - URLR"],
+    keywords=["link shortener", "api", "sdk", "client"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,

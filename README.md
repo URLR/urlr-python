@@ -1,26 +1,24 @@
-# urlr@0.0.1
+# urlr@0.0.2
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
 - API version: 0.2
-- Package version: 0.0.1
+- Package version: 0.0.2
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
+
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
+
+## Installation & Usage
 
 ## Requirements
 
 Python 3.7+
 
-## Installation & Usage
-
 ### pip install
 
-If the python package is hosted on a repository, you can install directly using:
-
 ```sh
-pip install git+https://github.com/urlr/urlr-python.git
+pip install urlr
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/urlr/urlr-python.git`)
 
 Then import the package:
 ```python

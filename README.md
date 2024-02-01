@@ -1,9 +1,9 @@
-# urlr@0.0.2
+# urlr@1.0.0
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
 - API version: 0.2
-- Package version: 0.0.2
+- Package version: 1.0.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -48,6 +48,39 @@ Execute `pytest` to run the tests.
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
+import urlr
+from urlr.rest import ApiException
+from pprint import pprint
+
+# Authentification
+
+with urlr.ApiClient() as api_client:
+    authentification_api = urlr.AuthentificationApi(api_client)
+    
+    authentification_request = urlr.AuthentificationRequest.from_json('{"username": "","password": ""}')
+
+    try:
+        api_response = authentification_api.authentification(authentification_request=authentification_request)
+    except ApiException as e:
+        print("Exception when calling AuthentificationApi->authentification: %s\n" % e)
+        quit()
+
+# Link shortening
+
+configuration = urlr.Configuration(
+    access_token = api_response.token
+)
+
+with urlr.ApiClient(configuration) as api_client:
+    link_api = urlr.LinkApi(api_client)
+    reduce_link_request = urlr.ReduceLinkRequest.from_json('{"url": "","team": ""}')
+
+    try:
+        # Reduce a link
+        api_response = link_api.reduce_link(reduce_link_request=reduce_link_request)
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LinkApi->reduce_link: %s\n" % e)
 ```
 
 A complete example is [available here](examples/example1.py).

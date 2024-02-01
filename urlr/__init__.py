@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.0.2"
+__version__ = "1.0.0"
 
 # import apis into sdk package
 from urlr.api.authentification_api import AuthentificationApi

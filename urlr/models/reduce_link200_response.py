@@ -33,8 +33,8 @@ class ReduceLink200Response(BaseModel):
     """ # noqa: E501
     url: Optional[StrictStr] = Field(default=None, description="Input url to reduce")
     expired_at: Optional[StrictStr] = Field(default=None, description="Expiration date")
-    team: Optional[StrictStr] = Field(default=None, description="Team id (displayed on dashboard)")
-    folder: Optional[StrictStr] = Field(default=None, description="Folder id (displayed on dashboard)")
+    team: Optional[StrictInt] = Field(default=None, description="Team id (displayed on dashboard)")
+    folder: Optional[StrictInt] = Field(default=None, description="Folder id (displayed on dashboard)")
     url_code: Optional[StrictStr] = None
     domain: Optional[StrictStr] = None
     code: Optional[StrictInt] = Field(default=None, description="HTTP status code")

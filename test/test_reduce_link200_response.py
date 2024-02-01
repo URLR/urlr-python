@@ -39,8 +39,8 @@ class TestReduceLink200Response(unittest.TestCase):
             return ReduceLink200Response(
                 url = '',
                 expired_at = '',
-                team = '',
-                folder = '',
+                team = 56,
+                folder = 56,
                 url_code = 'xMs5c',
                 domain = 'urlr.me',
                 code = 200

@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** | Input url to reduce | [optional] 
 **expired_at** | **str** | Expiration date | [optional] 
-**team** | **str** | Team id (displayed on dashboard) | [optional] 
-**folder** | **str** | Folder id (displayed on dashboard) | [optional] 
+**team** | **int** | Team id (displayed on dashboard) | [optional] 
+**folder** | **int** | Folder id (displayed on dashboard) | [optional] 
 **url_code** | **str** |  | [optional] 
 **domain** | **str** |  | [optional] 
 **code** | **int** | HTTP status code | [optional] 

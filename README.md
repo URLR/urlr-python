@@ -1,11 +1,11 @@
-# urlr@1.0.1
+# urlr@1.1.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 0.2
-- Package version: 1.0.1
+- API version: 0.3
+- Package version: 1.1.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -94,8 +94,10 @@ All URIs are relative to *https://urlr.me/api*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthentificationApi* | [**authentification**](docs/AuthentificationApi.md#authentification) | **POST** /login_check | Get an access token
-*LinkApi* | [**reduce_link**](docs/LinkApi.md#reduce_link) | **POST** /reduce-link | Reduce a link
+*FolderApi* | [**folder**](docs/FolderApi.md#folder) | **GET** /folder | Get folders of team
+*LinkApi* | [**reduce_link**](docs/LinkApi.md#reduce_link) | **POST** /reduce-link | Shorten a link
 *StatsApi* | [**stats**](docs/StatsApi.md#stats) | **POST** /stats | Get statistics of a link
+*TeamApi* | [**team**](docs/TeamApi.md#team) | **GET** /team | Get teams of user
 
 
 ## Models
@@ -103,12 +105,17 @@ Class | Method | HTTP request | Description
  - [Authentification200Response](docs/Authentification200Response.md)
  - [Authentification401Response](docs/Authentification401Response.md)
  - [AuthentificationRequest](docs/AuthentificationRequest.md)
+ - [Folder200Response](docs/Folder200Response.md)
+ - [Folder200ResponseFoldersInner](docs/Folder200ResponseFoldersInner.md)
+ - [FolderRequest](docs/FolderRequest.md)
  - [ReduceLink200Response](docs/ReduceLink200Response.md)
  - [ReduceLink400Response](docs/ReduceLink400Response.md)
  - [ReduceLinkRequest](docs/ReduceLinkRequest.md)
  - [Stats200Response](docs/Stats200Response.md)
  - [Stats400Response](docs/Stats400Response.md)
  - [StatsRequest](docs/StatsRequest.md)
+ - [Team200Response](docs/Team200Response.md)
+ - [Team200ResponseTeamsInner](docs/Team200ResponseTeamsInner.md)
 
 
 <a id="documentation-for-authorization"></a>

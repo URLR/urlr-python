@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clicks** | **int** |  | [optional] 
-**unique_clicks** | **int** |  | [optional] 
+**clicks** | **int** | Clicks | [optional] 
+**unique_clicks** | **int** | Unique clicks | [optional] 
 
 ## Example
 

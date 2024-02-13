@@ -16,8 +16,6 @@ Get an access token
 
 
 ```python
-import time
-import os
 import urlr
 from urlr.models.authentification200_response import Authentification200Response
 from urlr.models.authentification_request import AuthentificationRequest

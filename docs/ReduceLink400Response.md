@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **int** | HTTP status code | [optional] 
-**error** | **int** |  | [optional] 
+**error** | **int** | Error code | [optional] 
 **message** | **str** | Message describing the error | [optional] 
 
 ## Example

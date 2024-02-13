@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **str** | Input url to reduce | [optional] 
+**url** | **str** | Original URL | [optional] 
 **expired_at** | **str** | Expiration date | [optional] 
-**team** | **int** | Team id (displayed on dashboard) | [optional] 
-**folder** | **int** | Folder id (displayed on dashboard) | [optional] 
-**url_code** | **str** |  | [optional] 
-**domain** | **str** |  | [optional] 
+**team** | **int** | Team ID (displayed on dashboard) | [optional] 
+**folder** | **int** | Folder ID (displayed on dashboard) | [optional] 
+**url_code** | **str** | Short code | [optional] 
+**domain** | **str** | Domain | [optional] 
 **code** | **int** | HTTP status code | [optional] 
 
 ## Example

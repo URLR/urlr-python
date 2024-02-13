@@ -17,8 +17,6 @@ Get statistics of a link
 * Bearer (JWT) Authentication (bearerAuth):
 
 ```python
-import time
-import os
 import urlr
 from urlr.models.stats200_response import Stats200Response
 from urlr.models.stats_request import StatsRequest

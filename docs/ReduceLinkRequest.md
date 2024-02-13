@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **str** | The url to reduce | 
-**team** | **str** | Team id (displayed on dashboard) | 
-**folder** | **str** | Folder id (displayed on dashboard) | [optional] 
-**code** | **str** | Custom code | [optional] 
-**label** | **str** | Link label | [optional] 
-**password** | **str** | Link password | [optional] 
+**url** | **str** | URL to shorten | 
+**team** | **str** | Team ID (displayed on dashboard) | 
+**folder** | **str** | Folder ID (displayed on dashboard) | [optional] 
+**code** | **str** | Custom short code | [optional] 
+**label** | **str** | Label | [optional] 
+**password** | **str** | Password | [optional] 
 **expired_at** | **str** | Expiration date | [optional] 
 
 ## Example

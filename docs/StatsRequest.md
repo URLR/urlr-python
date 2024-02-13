@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | **str** | The short code of the url | 
+**code** | **str** | The short code of the URL | 
 **var_from** | **str** | Get stats from this date | [optional] 
 **to** | **str** | Get stats until this date | [optional] 
 **include_bots** | **bool** | Whether include bots or not in statistics | [optional] 

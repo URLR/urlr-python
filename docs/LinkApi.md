@@ -4,21 +4,19 @@ All URIs are relative to *https://urlr.me/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**reduce_link**](LinkApi.md#reduce_link) | **POST** /reduce-link | Reduce a link
+[**reduce_link**](LinkApi.md#reduce_link) | **POST** /reduce-link | Shorten a link
 
 
 # **reduce_link**
 > ReduceLink200Response reduce_link(reduce_link_request=reduce_link_request)
 
-Reduce a link
+Shorten a link
 
 ### Example
 
 * Bearer (JWT) Authentication (bearerAuth):
 
 ```python
-import time
-import os
 import urlr
 from urlr.models.reduce_link200_response import ReduceLink200Response
 from urlr.models.reduce_link_request import ReduceLinkRequest
@@ -45,10 +43,10 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinkApi(api_client)
-    reduce_link_request = urlr.ReduceLinkRequest() # ReduceLinkRequest | Infos of the link to reduce (optional)
+    reduce_link_request = urlr.ReduceLinkRequest() # ReduceLinkRequest | Info of the link to shorten (optional)
 
     try:
-        # Reduce a link
+        # Shorten a link
         api_response = api_instance.reduce_link(reduce_link_request=reduce_link_request)
         print("The response of LinkApi->reduce_link:\n")
         pprint(api_response)
@@ -63,7 +61,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reduce_link_request** | [**ReduceLinkRequest**](ReduceLinkRequest.md)| Infos of the link to reduce | [optional] 
+ **reduce_link_request** | [**ReduceLinkRequest**](ReduceLinkRequest.md)| Info of the link to shorten | [optional] 
 
 ### Return type
 

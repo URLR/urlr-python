@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of Team200ResponseTeamsInner from a JSON string
 team200_response_teams_inner_instance = Team200ResponseTeamsInner.from_json(json)
 # print the JSON string representation of the object
-print Team200ResponseTeamsInner.to_json()
+print(Team200ResponseTeamsInner.to_json())
 
 # convert the object into a dict
 team200_response_teams_inner_dict = team200_response_teams_inner_instance.to_dict()
 # create an instance of Team200ResponseTeamsInner from a dict
-team200_response_teams_inner_form_dict = team200_response_teams_inner.from_dict(team200_response_teams_inner_dict)
+team200_response_teams_inner_from_dict = Team200ResponseTeamsInner.from_dict(team200_response_teams_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

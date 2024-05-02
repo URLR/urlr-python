@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of Stats400Response from a JSON string
 stats400_response_instance = Stats400Response.from_json(json)
 # print the JSON string representation of the object
-print Stats400Response.to_json()
+print(Stats400Response.to_json())
 
 # convert the object into a dict
 stats400_response_dict = stats400_response_instance.to_dict()
 # create an instance of Stats400Response from a dict
-stats400_response_form_dict = stats400_response.from_dict(stats400_response_dict)
+stats400_response_from_dict = Stats400Response.from_dict(stats400_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

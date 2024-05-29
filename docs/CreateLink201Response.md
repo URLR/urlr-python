@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **url** | **str** | Original URL | [optional] 
 **team** | **str** | Team API ID | [optional] 
 **folder_id** | **str** | Folder API ID | [optional] 
-**domain_id** | **str** | Domain | [optional] 
+**domain** | **str** | Domain | [optional] 
 **code** | **str** | Short code | [optional] 
 **label** | **str** | Label | [optional] 
 **created_at** | **datetime** | Creation date | [optional] 

@@ -45,7 +45,7 @@ class AccessTokensApi:
     @validate_call
     def create_access_token(
         self,
-        create_access_token_request: Annotated[Optional[CreateAccessTokenRequest], Field(description="Your credentials")] = None,
+        create_access_token_request: Annotated[Optional[CreateAccessTokenRequest], Field(description="You can use this endpoint to get an access token to access the API.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -62,7 +62,7 @@ class AccessTokensApi:
         """Get an access token
 
 
-        :param create_access_token_request: Your credentials
+        :param create_access_token_request: You can use this endpoint to get an access token to access the API.
         :type create_access_token_request: CreateAccessTokenRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -112,7 +112,7 @@ class AccessTokensApi:
     @validate_call
     def create_access_token_with_http_info(
         self,
-        create_access_token_request: Annotated[Optional[CreateAccessTokenRequest], Field(description="Your credentials")] = None,
+        create_access_token_request: Annotated[Optional[CreateAccessTokenRequest], Field(description="You can use this endpoint to get an access token to access the API.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -129,7 +129,7 @@ class AccessTokensApi:
         """Get an access token
 
 
-        :param create_access_token_request: Your credentials
+        :param create_access_token_request: You can use this endpoint to get an access token to access the API.
         :type create_access_token_request: CreateAccessTokenRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -179,7 +179,7 @@ class AccessTokensApi:
     @validate_call
     def create_access_token_without_preload_content(
         self,
-        create_access_token_request: Annotated[Optional[CreateAccessTokenRequest], Field(description="Your credentials")] = None,
+        create_access_token_request: Annotated[Optional[CreateAccessTokenRequest], Field(description="You can use this endpoint to get an access token to access the API.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -196,7 +196,7 @@ class AccessTokensApi:
         """Get an access token
 
 
-        :param create_access_token_request: Your credentials
+        :param create_access_token_request: You can use this endpoint to get an access token to access the API.
         :type create_access_token_request: CreateAccessTokenRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -315,7 +315,7 @@ class AccessTokensApi:
     @validate_call
     def refresh_access_token(
         self,
-        refresh_access_token_request: Annotated[Optional[RefreshAccessTokenRequest], Field(description="Your credentials")] = None,
+        refresh_access_token_request: Annotated[Optional[RefreshAccessTokenRequest], Field(description="You can use this endpoint to refresh your access token without credentials.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -332,7 +332,7 @@ class AccessTokensApi:
         """Refresh an access token
 
 
-        :param refresh_access_token_request: Your credentials
+        :param refresh_access_token_request: You can use this endpoint to refresh your access token without credentials.
         :type refresh_access_token_request: RefreshAccessTokenRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -382,7 +382,7 @@ class AccessTokensApi:
     @validate_call
     def refresh_access_token_with_http_info(
         self,
-        refresh_access_token_request: Annotated[Optional[RefreshAccessTokenRequest], Field(description="Your credentials")] = None,
+        refresh_access_token_request: Annotated[Optional[RefreshAccessTokenRequest], Field(description="You can use this endpoint to refresh your access token without credentials.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -399,7 +399,7 @@ class AccessTokensApi:
         """Refresh an access token
 
 
-        :param refresh_access_token_request: Your credentials
+        :param refresh_access_token_request: You can use this endpoint to refresh your access token without credentials.
         :type refresh_access_token_request: RefreshAccessTokenRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -449,7 +449,7 @@ class AccessTokensApi:
     @validate_call
     def refresh_access_token_without_preload_content(
         self,
-        refresh_access_token_request: Annotated[Optional[RefreshAccessTokenRequest], Field(description="Your credentials")] = None,
+        refresh_access_token_request: Annotated[Optional[RefreshAccessTokenRequest], Field(description="You can use this endpoint to refresh your access token without credentials.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -466,7 +466,7 @@ class AccessTokensApi:
         """Refresh an access token
 
 
-        :param refresh_access_token_request: Your credentials
+        :param refresh_access_token_request: You can use this endpoint to refresh your access token without credentials.
         :type refresh_access_token_request: RefreshAccessTokenRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

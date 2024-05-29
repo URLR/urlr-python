@@ -32,13 +32,13 @@ class CreateLink201Response(BaseModel):
     url: Optional[StrictStr] = Field(default=None, description="Original URL")
     team: Optional[StrictStr] = Field(default=None, description="Team API ID")
     folder_id: Optional[StrictStr] = Field(default=None, description="Folder API ID")
-    domain_id: Optional[StrictStr] = Field(default=None, description="Domain")
+    domain: Optional[StrictStr] = Field(default=None, description="Domain")
     code: Optional[StrictStr] = Field(default=None, description="Short code")
     label: Optional[StrictStr] = Field(default=None, description="Label")
     created_at: Optional[datetime] = Field(default=None, description="Creation date")
     updated_at: Optional[datetime] = Field(default=None, description="Modification date")
     expired_at: Optional[datetime] = Field(default=None, description="Expiration date")
-    __properties: ClassVar[List[str]] = ["id", "url", "team", "folder_id", "domain_id", "code", "label", "created_at", "updated_at", "expired_at"]
+    __properties: ClassVar[List[str]] = ["id", "url", "team", "folder_id", "domain", "code", "label", "created_at", "updated_at", "expired_at"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -95,7 +95,7 @@ class CreateLink201Response(BaseModel):
             "url": obj.get("url"),
             "team": obj.get("team"),
             "folder_id": obj.get("folder_id"),
-            "domain_id": obj.get("domain_id"),
+            "domain": obj.get("domain"),
             "code": obj.get("code"),
             "label": obj.get("label"),
             "created_at": obj.get("created_at"),

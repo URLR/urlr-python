@@ -34,7 +34,7 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.AccessTokensApi(api_client)
-    create_access_token_request = urlr.CreateAccessTokenRequest() # CreateAccessTokenRequest | Your credentials (optional)
+    create_access_token_request = urlr.CreateAccessTokenRequest() # CreateAccessTokenRequest | You can use this endpoint to get an access token to access the API. (optional)
 
     try:
         # Get an access token
@@ -52,7 +52,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_access_token_request** | [**CreateAccessTokenRequest**](CreateAccessTokenRequest.md)| Your credentials | [optional] 
+ **create_access_token_request** | [**CreateAccessTokenRequest**](CreateAccessTokenRequest.md)| You can use this endpoint to get an access token to access the API. | [optional] 
 
 ### Return type
 
@@ -102,7 +102,7 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.AccessTokensApi(api_client)
-    refresh_access_token_request = urlr.RefreshAccessTokenRequest() # RefreshAccessTokenRequest | Your credentials (optional)
+    refresh_access_token_request = urlr.RefreshAccessTokenRequest() # RefreshAccessTokenRequest | You can use this endpoint to refresh your access token without credentials. (optional)
 
     try:
         # Refresh an access token
@@ -120,7 +120,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **refresh_access_token_request** | [**RefreshAccessTokenRequest**](RefreshAccessTokenRequest.md)| Your credentials | [optional] 
+ **refresh_access_token_request** | [**RefreshAccessTokenRequest**](RefreshAccessTokenRequest.md)| You can use this endpoint to refresh your access token without credentials. | [optional] 
 
 ### Return type
 

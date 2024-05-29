@@ -40,7 +40,7 @@ class TestCreateLink201Response(unittest.TestCase):
                 url = '',
                 team = '',
                 folder_id = '',
-                domain_id = 'urlr.me',
+                domain = 'urlr.me',
                 code = 'xxxxx',
                 label = '',
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),

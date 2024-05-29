@@ -1,11 +1,11 @@
-# urlr@1.2.0
+# urlr@2.0.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 0.3
-- Package version: 1.2.0
+- API version: 1.0
+- Package version: 2.0.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -89,33 +89,40 @@ A complete example is [available here](examples/example1.py).
 
 ## API Endpoints
 
-All URIs are relative to *https://urlr.me/api*
+All URIs are relative to *https://urlr.me/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthentificationApi* | [**authentification**](docs/AuthentificationApi.md#authentification) | **POST** /login_check | Get an access token
-*FolderApi* | [**folder**](docs/FolderApi.md#folder) | **GET** /folder | Get folders of team
-*LinkApi* | [**reduce_link**](docs/LinkApi.md#reduce_link) | **POST** /reduce-link | Shorten a link
-*StatsApi* | [**stats**](docs/StatsApi.md#stats) | **POST** /stats | Get statistics of a link
-*TeamApi* | [**team**](docs/TeamApi.md#team) | **GET** /team | Get teams of user
+*AccessTokensApi* | [**create_access_token**](docs/AccessTokensApi.md#create_access_token) | **POST** /access_tokens/create | Get an access token
+*AccessTokensApi* | [**refresh_access_token**](docs/AccessTokensApi.md#refresh_access_token) | **POST** /access_tokens/refresh | Refresh an access token
+*FoldersApi* | [**get_folders**](docs/FoldersApi.md#get_folders) | **GET** /folders/{team_id} | Get folders of team
+*LinksApi* | [**create_link**](docs/LinksApi.md#create_link) | **POST** /links/create | Create a link
+*LinksApi* | [**get_link**](docs/LinksApi.md#get_link) | **GET** /links/{link_id} | Get a link
+*StatisticsApi* | [**get_statistics**](docs/StatisticsApi.md#get_statistics) | **POST** /statistics | Get statistics of a link
+*TeamsApi* | [**get_teams**](docs/TeamsApi.md#get_teams) | **GET** /teams | Get teams of user
 
 
 ## Models
 
- - [Authentification200Response](docs/Authentification200Response.md)
- - [Authentification401Response](docs/Authentification401Response.md)
- - [AuthentificationRequest](docs/AuthentificationRequest.md)
- - [Folder200Response](docs/Folder200Response.md)
- - [Folder200ResponseFoldersInner](docs/Folder200ResponseFoldersInner.md)
- - [FolderRequest](docs/FolderRequest.md)
- - [ReduceLink200Response](docs/ReduceLink200Response.md)
- - [ReduceLink400Response](docs/ReduceLink400Response.md)
- - [ReduceLinkRequest](docs/ReduceLinkRequest.md)
- - [Stats200Response](docs/Stats200Response.md)
- - [Stats400Response](docs/Stats400Response.md)
- - [StatsRequest](docs/StatsRequest.md)
- - [Team200Response](docs/Team200Response.md)
- - [Team200ResponseTeamsInner](docs/Team200ResponseTeamsInner.md)
+ - [CreateAccessToken200Response](docs/CreateAccessToken200Response.md)
+ - [CreateAccessToken401Response](docs/CreateAccessToken401Response.md)
+ - [CreateAccessTokenRequest](docs/CreateAccessTokenRequest.md)
+ - [CreateLink201Response](docs/CreateLink201Response.md)
+ - [CreateLink429Response](docs/CreateLink429Response.md)
+ - [CreateLink500Response](docs/CreateLink500Response.md)
+ - [CreateLinkRequest](docs/CreateLinkRequest.md)
+ - [GetFolders200Response](docs/GetFolders200Response.md)
+ - [GetFolders200ResponseFoldersInner](docs/GetFolders200ResponseFoldersInner.md)
+ - [GetLink200Response](docs/GetLink200Response.md)
+ - [GetLink401Response](docs/GetLink401Response.md)
+ - [GetLink404Response](docs/GetLink404Response.md)
+ - [GetLink422Response](docs/GetLink422Response.md)
+ - [GetStatistics200Response](docs/GetStatistics200Response.md)
+ - [GetStatisticsRequest](docs/GetStatisticsRequest.md)
+ - [GetTeams200Response](docs/GetTeams200Response.md)
+ - [GetTeams200ResponseTeamsInner](docs/GetTeams200ResponseTeamsInner.md)
+ - [RefreshAccessToken401Response](docs/RefreshAccessToken401Response.md)
+ - [RefreshAccessTokenRequest](docs/RefreshAccessTokenRequest.md)
 
 
 <a id="documentation-for-authorization"></a>

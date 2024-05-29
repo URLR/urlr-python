@@ -2,17 +2,17 @@ import urlr
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Authentification
+# Access Tokens
 
 with urlr.ApiClient() as api_client:
-    authentification_api = urlr.AuthentificationApi(api_client)
+    access_tokens_api = urlr.AccessTokensApi(api_client)
     
-    authentification_request = urlr.AuthentificationRequest.from_json('{"username": "","password": ""}')
+    access_tokens_request = urlr.AccessTokensRequest.from_json('{"username": "","password": ""}')
 
     try:
-        api_response = authentification_api.authentification(authentification_request=authentification_request)
+        api_response = access_tokens_api.create_access_token(access_tokens_request=access_tokens_request)
     except ApiException as e:
-        print("Exception when calling AuthentificationApi->authentification: %s\n" % e)
+        print("Exception when calling AccessTokensApi->create_access_token: %s\n" % e)
         quit()
 
 # Link shortening
@@ -22,25 +22,23 @@ configuration = urlr.Configuration(
 )
 
 with urlr.ApiClient(configuration) as api_client:
-    link_api = urlr.LinkApi(api_client)
-    reduce_link_request = urlr.ReduceLinkRequest.from_json('{"url": "","team_id": ""}')
+    link_api = urlr.LinksApi(api_client)
+    create_link_request = urlr.CreateLinkRequest.from_json('{"url": "","team_id": ""}')
 
     try:
-        # Reduce a link
-        api_response = link_api.reduce_link(reduce_link_request=reduce_link_request)
+        api_response = link_api.create_link(create_link_request=create_link_request)
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling LinkApi->reduce_link: %s\n" % e)
+        pprint("Exception when calling LinksApi->create_link: %s\n" % e)
 
 # Statistics
 
 with urlr.ApiClient(configuration) as api_client:
-    stats_api = urlr.StatsApi(api_client)
-    stats_request = urlr.StatsRequest.from_json('{"code": ""}')
+    statistics_api = urlr.StatisticsApi(api_client)
+    statistics_request = urlr.StatisticsRequest.from_json('{"link_id": ""}')
 
     try:
-        # Reduce a link
-        api_response = stats_api.stats(stats_request=stats_request)
+        api_response = statistics_api.statistics(statistics_request=statistics_request)
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling StatsApi->stats: %s\n" % e)
+        print("Exception when calling StatisticsApi->statistics: %s\n" % e)

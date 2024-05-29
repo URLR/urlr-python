@@ -75,7 +75,7 @@ configuration = urlr.Configuration(
 
 with urlr.ApiClient(configuration) as api_client:
     link_api = urlr.LinkApi(api_client)
-    reduce_link_request = urlr.ReduceLinkRequest.from_json('{"url": "","team": ""}')
+    reduce_link_request = urlr.ReduceLinkRequest.from_json('{"url": "","team_id": ""}')
 
     try:
         # Reduce a link

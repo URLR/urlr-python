@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.get_folders200_response import GetFolders200Response
+from urlr.models.create_link_request_metatag import CreateLinkRequestMetatag
 
-class TestGetFolders200Response(unittest.TestCase):
-    """GetFolders200Response unit test stubs"""
+class TestCreateLinkRequestMetatag(unittest.TestCase):
+    """CreateLinkRequestMetatag unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,29 +26,27 @@ class TestGetFolders200Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> GetFolders200Response:
-        """Test GetFolders200Response
+    def make_instance(self, include_optional) -> CreateLinkRequestMetatag:
+        """Test CreateLinkRequestMetatag
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `GetFolders200Response`
+        # uncomment below to create an instance of `CreateLinkRequestMetatag`
         """
-        model = GetFolders200Response()
+        model = CreateLinkRequestMetatag()
         if include_optional:
-            return GetFolders200Response(
-                folders = [
-                    urlr.models.get_folders_200_response_folders_inner.getFolders_200_response_folders_inner(
-                        id = '436b5d20-e174-4363-94e5-2b3dd4e74b5f', 
-                        name = 'folder-campaign-google-ads', )
-                    ]
+            return CreateLinkRequestMetatag(
+                title = '',
+                description = '',
+                image = ''
             )
         else:
-            return GetFolders200Response(
+            return CreateLinkRequestMetatag(
         )
         """
 
-    def testGetFolders200Response(self):
-        """Test GetFolders200Response"""
+    def testCreateLinkRequestMetatag(self):
+        """Test CreateLinkRequestMetatag"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

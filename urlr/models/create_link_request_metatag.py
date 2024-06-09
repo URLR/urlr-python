@@ -18,18 +18,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class RefreshAccessToken401Response(BaseModel):
+class CreateLinkRequestMetatag(BaseModel):
     """
-    RefreshAccessToken401Response
+    Custom metadata for social previews
     """ # noqa: E501
-    code: Optional[StrictInt] = None
-    message: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["code", "message"]
+    title: Optional[StrictStr] = Field(default=None, description="Title for the link")
+    description: Optional[StrictStr] = Field(default=None, description="Description for the link")
+    image: Optional[StrictStr] = Field(default=None, description="Image URL for the link. Recommended: 1200X630px<br>Maximum size: 3Mb - Formats: PNG, JPEG, WebP and GIF.")
+    __properties: ClassVar[List[str]] = ["title", "description", "image"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +50,7 @@ class RefreshAccessToken401Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of RefreshAccessToken401Response from a JSON string"""
+        """Create an instance of CreateLinkRequestMetatag from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +75,7 @@ class RefreshAccessToken401Response(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of RefreshAccessToken401Response from a dict"""
+        """Create an instance of CreateLinkRequestMetatag from a dict"""
         if obj is None:
             return None
 
@@ -82,8 +83,9 @@ class RefreshAccessToken401Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "code": obj.get("code"),
-            "message": obj.get("message")
+            "title": obj.get("title"),
+            "description": obj.get("description"),
+            "image": obj.get("image")
         })
         return _obj
 

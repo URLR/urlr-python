@@ -1,11 +1,11 @@
-# urlr@2.0.1
+# urlr@2.1.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 1.0
-- Package version: 2.0.1
+- API version: 1.1
+- Package version: 2.1.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -107,13 +107,15 @@ Class | Method | HTTP request | Description
  - [CreateAccessToken200Response](docs/CreateAccessToken200Response.md)
  - [CreateAccessToken401Response](docs/CreateAccessToken401Response.md)
  - [CreateAccessTokenRequest](docs/CreateAccessTokenRequest.md)
- - [CreateLink201Response](docs/CreateLink201Response.md)
  - [CreateLink429Response](docs/CreateLink429Response.md)
  - [CreateLink500Response](docs/CreateLink500Response.md)
  - [CreateLinkRequest](docs/CreateLinkRequest.md)
+ - [CreateLinkRequestMetatag](docs/CreateLinkRequestMetatag.md)
  - [GetFolders200Response](docs/GetFolders200Response.md)
  - [GetFolders200ResponseFoldersInner](docs/GetFolders200ResponseFoldersInner.md)
  - [GetLink200Response](docs/GetLink200Response.md)
+ - [GetLink200ResponseGeolinksInner](docs/GetLink200ResponseGeolinksInner.md)
+ - [GetLink200ResponseMetatag](docs/GetLink200ResponseMetatag.md)
  - [GetLink401Response](docs/GetLink401Response.md)
  - [GetLink404Response](docs/GetLink404Response.md)
  - [GetLink422Response](docs/GetLink422Response.md)

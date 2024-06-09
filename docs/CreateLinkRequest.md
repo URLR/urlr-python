@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **code** | **str** | Custom short code | [optional] 
 **label** | **str** | Label | [optional] 
 **password** | **str** | Password | [optional] 
+**metatag** | [**CreateLinkRequestMetatag**](CreateLinkRequestMetatag.md) |  | [optional] 
 **expired_at** | **datetime** | Expiration date | [optional] 
 
 ## Example

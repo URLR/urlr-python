@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **create_link**
-> CreateLink201Response create_link(create_link_request=create_link_request)
+> GetLink200Response create_link(create_link_request=create_link_request)
 
 Create a link
 
@@ -19,8 +19,8 @@ Create a link
 
 ```python
 import urlr
-from urlr.models.create_link201_response import CreateLink201Response
 from urlr.models.create_link_request import CreateLinkRequest
+from urlr.models.get_link200_response import GetLink200Response
 from urlr.rest import ApiException
 from pprint import pprint
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateLink201Response**](CreateLink201Response.md)
+[**GetLink200Response**](GetLink200Response.md)
 
 ### Authorization
 

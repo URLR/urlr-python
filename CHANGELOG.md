@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.2.0] - 2024-06-16
+
+- Updated URLR API version to 1.2
+
 ## [2.1.0] - 2024-06-07
 
 - Updated URLR API version to 1.1

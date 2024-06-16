@@ -1,11 +1,11 @@
-# urlr@2.1.0
+# urlr@2.2.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 1.1
-- Package version: 2.1.0
+- API version: 1.2
+- Package version: 2.2.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *FoldersApi* | [**get_folders**](docs/FoldersApi.md#get_folders) | **GET** /folders/{team_id} | Get folders of team
 *LinksApi* | [**create_link**](docs/LinksApi.md#create_link) | **POST** /links/create | Create a link
 *LinksApi* | [**get_link**](docs/LinksApi.md#get_link) | **GET** /links/{link_id} | Get a link
+*QRCodesApi* | [**create_qr_code**](docs/QRCodesApi.md#create_qr_code) | **POST** /qrcodes/create | Create a QR Code
 *StatisticsApi* | [**get_statistics**](docs/StatisticsApi.md#get_statistics) | **POST** /statistics | Get statistics of a link
 *TeamsApi* | [**get_teams**](docs/TeamsApi.md#get_teams) | **GET** /teams | Get teams of user
 
@@ -111,11 +112,16 @@ Class | Method | HTTP request | Description
  - [CreateLink500Response](docs/CreateLink500Response.md)
  - [CreateLinkRequest](docs/CreateLinkRequest.md)
  - [CreateLinkRequestMetatag](docs/CreateLinkRequestMetatag.md)
+ - [CreateLinkRequestQrcode](docs/CreateLinkRequestQrcode.md)
+ - [CreateQrCodeRequest](docs/CreateQrCodeRequest.md)
+ - [CreateQrCodeRequestOneOf](docs/CreateQrCodeRequestOneOf.md)
+ - [CreateQrCodeRequestOneOf1](docs/CreateQrCodeRequestOneOf1.md)
  - [GetFolders200Response](docs/GetFolders200Response.md)
  - [GetFolders200ResponseFoldersInner](docs/GetFolders200ResponseFoldersInner.md)
  - [GetLink200Response](docs/GetLink200Response.md)
  - [GetLink200ResponseGeolinksInner](docs/GetLink200ResponseGeolinksInner.md)
  - [GetLink200ResponseMetatag](docs/GetLink200ResponseMetatag.md)
+ - [GetLink200ResponseQrcode](docs/GetLink200ResponseQrcode.md)
  - [GetLink401Response](docs/GetLink401Response.md)
  - [GetLink404Response](docs/GetLink404Response.md)
  - [GetLink422Response](docs/GetLink422Response.md)

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "urlr"
-version = "2.1.0"
+version = "2.2.0"
 description = "Python client for URLR"
 authors = ["URLR <contact@urlr.me>"]
 license = "MIT"

@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | Creation date | [optional] 
 **updated_at** | **datetime** | Modification date | [optional] 
 **expired_at** | **datetime** | Expiration date | [optional] 
+**expired_url** | **str** | Expiration URL | [optional] 
 
 ## Example
 

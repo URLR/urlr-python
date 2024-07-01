@@ -8,12 +8,14 @@ Name | Type | Description | Notes
 **url** | **str** | URL to shorten | 
 **team_id** | **str** | Team API ID | 
 **folder_id** | **str** | Folder API ID | [optional] 
+**domain** | **str** | Domain | [optional] 
 **code** | **str** | Custom short code | [optional] 
 **label** | **str** | Label | [optional] 
 **password** | **str** | Password | [optional] 
 **qrcode** | [**CreateLinkRequestQrcode**](CreateLinkRequestQrcode.md) |  | [optional] 
 **metatag** | [**CreateLinkRequestMetatag**](CreateLinkRequestMetatag.md) |  | [optional] 
 **expired_at** | **datetime** | Expiration date | [optional] 
+**expired_url** | **str** | Expiration URL | [optional] 
 
 ## Example
 

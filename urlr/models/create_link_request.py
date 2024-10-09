@@ -50,8 +50,8 @@ class CreateLinkRequest(BaseModel):
         if value is None:
             return value
 
-        if not re.match(r"^[a-zA-Z0-9!-]{3,50}$", value):
-            raise ValueError(r"must validate the regular expression /^[a-zA-Z0-9!-]{3,50}$/")
+        if not re.match(r"^[a-zA-Z0-9!-]{2,50}$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z0-9!-]{2,50}$/")
         return value
 
     model_config = ConfigDict(

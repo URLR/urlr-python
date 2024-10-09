@@ -33,7 +33,7 @@ class GetLink200Response(BaseModel):
     """ # noqa: E501
     id: Optional[StrictStr] = Field(default=None, description="Link API ID")
     url: Optional[StrictStr] = Field(default=None, description="Original URL")
-    team: Optional[StrictStr] = Field(default=None, description="Team API ID")
+    team_id: Optional[StrictStr] = Field(default=None, description="Team API ID")
     folder_id: Optional[StrictStr] = Field(default=None, description="Folder API ID")
     domain: Optional[StrictStr] = Field(default=None, description="Domain")
     code: Optional[StrictStr] = Field(default=None, description="Short code")
@@ -45,7 +45,7 @@ class GetLink200Response(BaseModel):
     updated_at: Optional[datetime] = Field(default=None, description="Modification date")
     expired_at: Optional[datetime] = Field(default=None, description="Expiration date")
     expired_url: Optional[StrictStr] = Field(default=None, description="Expiration URL")
-    __properties: ClassVar[List[str]] = ["id", "url", "team", "folder_id", "domain", "code", "label", "qrcode", "metatag", "geolinks", "created_at", "updated_at", "expired_at", "expired_url"]
+    __properties: ClassVar[List[str]] = ["id", "url", "team_id", "folder_id", "domain", "code", "label", "qrcode", "metatag", "geolinks", "created_at", "updated_at", "expired_at", "expired_url"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -95,9 +95,9 @@ class GetLink200Response(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in geolinks (list)
         _items = []
         if self.geolinks:
-            for _item in self.geolinks:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_geolinks in self.geolinks:
+                if _item_geolinks:
+                    _items.append(_item_geolinks.to_dict())
             _dict['geolinks'] = _items
         return _dict
 
@@ -113,7 +113,7 @@ class GetLink200Response(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "url": obj.get("url"),
-            "team": obj.get("team"),
+            "team_id": obj.get("team_id"),
             "folder_id": obj.get("folder_id"),
             "domain": obj.get("domain"),
             "code": obj.get("code"),

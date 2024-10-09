@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "2.3.0"
+__version__ = "2.4.0"
 
 # import apis into sdk package
 from urlr.api.access_tokens_api import AccessTokensApi

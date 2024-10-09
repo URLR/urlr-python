@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | Link API ID | [optional] 
 **url** | **str** | Original URL | [optional] 
-**team** | **str** | Team API ID | [optional] 
+**team_id** | **str** | Team API ID | [optional] 
 **folder_id** | **str** | Folder API ID | [optional] 
 **domain** | **str** | Domain | [optional] 
 **code** | **str** | Short code | [optional] 

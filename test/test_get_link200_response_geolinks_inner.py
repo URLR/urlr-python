@@ -28,7 +28,7 @@ class TestGetLink200ResponseGeolinksInner(unittest.TestCase):
 
     def make_instance(self, include_optional) -> GetLink200ResponseGeolinksInner:
         """Test GetLink200ResponseGeolinksInner
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `GetLink200ResponseGeolinksInner`

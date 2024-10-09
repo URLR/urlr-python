@@ -28,7 +28,7 @@ class TestGetStatisticsRequest(unittest.TestCase):
 
     def make_instance(self, include_optional) -> GetStatisticsRequest:
         """Test GetStatisticsRequest
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `GetStatisticsRequest`
@@ -43,6 +43,7 @@ class TestGetStatisticsRequest(unittest.TestCase):
             )
         else:
             return GetStatisticsRequest(
+                link_id = '',
         )
         """
 

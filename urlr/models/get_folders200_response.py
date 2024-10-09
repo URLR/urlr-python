@@ -73,9 +73,9 @@ class GetFolders200Response(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in folders (list)
         _items = []
         if self.folders:
-            for _item in self.folders:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_folders in self.folders:
+                if _item_folders:
+                    _items.append(_item_folders.to_dict())
             _dict['folders'] = _items
         return _dict
 

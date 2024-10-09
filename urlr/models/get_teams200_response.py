@@ -73,9 +73,9 @@ class GetTeams200Response(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in teams (list)
         _items = []
         if self.teams:
-            for _item in self.teams:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_teams in self.teams:
+                if _item_teams:
+                    _items.append(_item_teams.to_dict())
             _dict['teams'] = _items
         return _dict
 

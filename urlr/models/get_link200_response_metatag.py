@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,8 +28,8 @@ class GetLink200ResponseMetatag(BaseModel):
     """
     Custom metadata for social previews
     """ # noqa: E501
-    title: Optional[StrictStr] = Field(default=None, description="Title of the link")
-    description: Optional[StrictStr] = Field(default=None, description="Description of the link")
+    title: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="Title of the link")
+    description: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="Description of the link")
     image: Optional[StrictStr] = Field(default=None, description="Image URL of the link")
     __properties: ClassVar[List[str]] = ["title", "description", "image"]
 

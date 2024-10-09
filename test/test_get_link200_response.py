@@ -28,7 +28,7 @@ class TestGetLink200Response(unittest.TestCase):
 
     def make_instance(self, include_optional) -> GetLink200Response:
         """Test GetLink200Response
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `GetLink200Response`
@@ -38,7 +38,7 @@ class TestGetLink200Response(unittest.TestCase):
             return GetLink200Response(
                 id = '436b5d20-e174-4363-94e5-2b3dd4e74b5f',
                 url = '',
-                team = '',
+                team_id = '',
                 folder_id = '',
                 domain = 'urlr.me',
                 code = 'xxxxx',

@@ -28,7 +28,7 @@ class GetStatisticsRequest(BaseModel):
     """
     GetStatisticsRequest
     """ # noqa: E501
-    link_id: Optional[StrictStr] = Field(default=None, description="Link API ID")
+    link_id: StrictStr = Field(description="Link API ID")
     var_from: Optional[datetime] = Field(default=None, description="Get statistics from this date", alias="from")
     to: Optional[datetime] = Field(default=None, description="Get statistics until this date")
     include_bots: Optional[StrictBool] = Field(default=False, description="Whether include bots or not in statistics")

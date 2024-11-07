@@ -21,6 +21,7 @@ docs/GetLink200Response.md
 docs/GetLink200ResponseGeolinksInner.md
 docs/GetLink200ResponseMetatag.md
 docs/GetLink200ResponseQrcode.md
+docs/GetLink200ResponseUtm.md
 docs/GetLink401Response.md
 docs/GetLink404Response.md
 docs/GetLink422Response.md
@@ -59,6 +60,7 @@ test/test_get_link200_response.py
 test/test_get_link200_response_geolinks_inner.py
 test/test_get_link200_response_metatag.py
 test/test_get_link200_response_qrcode.py
+test/test_get_link200_response_utm.py
 test/test_get_link401_response.py
 test/test_get_link404_response.py
 test/test_get_link422_response.py
@@ -103,6 +105,7 @@ urlr/models/get_link200_response.py
 urlr/models/get_link200_response_geolinks_inner.py
 urlr/models/get_link200_response_metatag.py
 urlr/models/get_link200_response_qrcode.py
+urlr/models/get_link200_response_utm.py
 urlr/models/get_link401_response.py
 urlr/models/get_link404_response.py
 urlr/models/get_link422_response.py

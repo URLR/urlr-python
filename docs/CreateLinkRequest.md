@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **label** | **str** | Label | [optional] 
 **password** | **str** | Password | [optional] 
 **qrcode** | [**CreateLinkRequestQrcode**](CreateLinkRequestQrcode.md) |  | [optional] 
+**utm** | [**GetLink200ResponseUtm**](GetLink200ResponseUtm.md) |  | [optional] 
 **metatag** | [**CreateLinkRequestMetatag**](CreateLinkRequestMetatag.md) |  | [optional] 
 **expired_at** | **datetime** | Expiration date | [optional] 
 **expired_url** | **str** | Expiration URL | [optional] 

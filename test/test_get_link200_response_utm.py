@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.create_access_token401_response import CreateAccessToken401Response
+from urlr.models.get_link200_response_utm import GetLink200ResponseUtm
 
-class TestCreateAccessToken401Response(unittest.TestCase):
-    """CreateAccessToken401Response unit test stubs"""
+class TestGetLink200ResponseUtm(unittest.TestCase):
+    """GetLink200ResponseUtm unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,26 +26,28 @@ class TestCreateAccessToken401Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> CreateAccessToken401Response:
-        """Test CreateAccessToken401Response
+    def make_instance(self, include_optional) -> GetLink200ResponseUtm:
+        """Test GetLink200ResponseUtm
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `CreateAccessToken401Response`
+        # uncomment below to create an instance of `GetLink200ResponseUtm`
         """
-        model = CreateAccessToken401Response()
+        model = GetLink200ResponseUtm()
         if include_optional:
-            return CreateAccessToken401Response(
-                code = 401,
-                message = 'Invalid credentials.'
+            return GetLink200ResponseUtm(
+                campaign = '',
+                medium = '',
+                source = '',
+                content = ''
             )
         else:
-            return CreateAccessToken401Response(
+            return GetLink200ResponseUtm(
         )
         """
 
-    def testCreateAccessToken401Response(self):
-        """Test CreateAccessToken401Response"""
+    def testGetLink200ResponseUtm(self):
+        """Test GetLink200ResponseUtm"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

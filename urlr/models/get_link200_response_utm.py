@@ -18,18 +18,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
+from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
 
-class RefreshAccessToken401Response(BaseModel):
+class GetLink200ResponseUtm(BaseModel):
     """
-    RefreshAccessToken401Response
+    UTM parameters
     """ # noqa: E501
-    code: Optional[StrictInt] = None
-    message: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["code", "message"]
+    campaign: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="utm_campaign")
+    medium: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="utm_medium")
+    source: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="utm_source")
+    content: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="utm_content")
+    __properties: ClassVar[List[str]] = ["campaign", "medium", "source", "content"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +52,7 @@ class RefreshAccessToken401Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of RefreshAccessToken401Response from a JSON string"""
+        """Create an instance of GetLink200ResponseUtm from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +77,7 @@ class RefreshAccessToken401Response(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of RefreshAccessToken401Response from a dict"""
+        """Create an instance of GetLink200ResponseUtm from a dict"""
         if obj is None:
             return None
 
@@ -82,8 +85,10 @@ class RefreshAccessToken401Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "code": obj.get("code"),
-            "message": obj.get("message")
+            "campaign": obj.get("campaign"),
+            "medium": obj.get("medium"),
+            "source": obj.get("source"),
+            "content": obj.get("content")
         })
         return _obj
 

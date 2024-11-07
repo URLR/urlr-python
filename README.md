@@ -1,11 +1,11 @@
-# urlr@2.4.0
+# urlr@2.5.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 1.3
-- Package version: 2.4.0
+- API version: 1.4
+- Package version: 2.5.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
  - [GetLink200ResponseGeolinksInner](docs/GetLink200ResponseGeolinksInner.md)
  - [GetLink200ResponseMetatag](docs/GetLink200ResponseMetatag.md)
  - [GetLink200ResponseQrcode](docs/GetLink200ResponseQrcode.md)
+ - [GetLink200ResponseUtm](docs/GetLink200ResponseUtm.md)
  - [GetLink401Response](docs/GetLink401Response.md)
  - [GetLink404Response](docs/GetLink404Response.md)
  - [GetLink422Response](docs/GetLink422Response.md)

@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.7.0] - 2025-01-25
+
+- Updated URLR API version to 1.5
+
 ## [2.6.0] - 2025-01-25
 
 - Updated to OpenAPI Generator 7.11.0

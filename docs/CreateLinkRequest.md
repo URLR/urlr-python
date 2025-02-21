@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **metatag** | [**CreateLinkRequestMetatag**](CreateLinkRequestMetatag.md) |  | [optional] 
 **expired_at** | **datetime** | Expiration date | [optional] 
 **expired_url** | **str** | Expiration URL | [optional] 
+**delete_after_expiration** | **bool** | Whether or not to remove the link after the expiry date | [optional] [default to False]
 
 ## Example
 

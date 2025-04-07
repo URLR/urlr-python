@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **domain** | **str** | Domain | [optional] 
 **code** | **str** | Custom short code | [optional] 
 **label** | **str** | Label | [optional] 
-**** | **List[str]** | Tags | [optional] 
+**tags** | **List[str]** | Tags | [optional] 
 **password** | **str** | Password | [optional] 
 **qrcode** | [**CreateLinkRequestQrcode**](CreateLinkRequestQrcode.md) |  | [optional] 
 **utm** | [**GetLink200ResponseUtm**](GetLink200ResponseUtm.md) |  | [optional] 

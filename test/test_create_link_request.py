@@ -42,7 +42,7 @@ class TestCreateLinkRequest(unittest.TestCase):
                 domain = 'mybrand.com',
                 code = 'xxxxx',
                 label = '',
-                 = [
+                tags = [
                     ''
                     ],
                 password = '',

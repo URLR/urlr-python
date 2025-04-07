@@ -1,6 +1,10 @@
 # Changelog
 
-## [2.8.0] - 2025-03-25
+## [2.8.1] - 2025-04-07
+
+- Fix missing property.
+
+## [2.8.0] - 2025-04-07
 
 - Updated URLR API version to 1.7
 - Updated to OpenAPI Generator 7.12.0

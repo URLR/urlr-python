@@ -38,7 +38,7 @@ class CreateLinkRequest(BaseModel):
     domain: Optional[StrictStr] = Field(default=None, description="Domain")
     code: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Custom short code")
     label: Optional[StrictStr] = Field(default=None, description="Label")
-    : Optional[Annotated[List[StrictStr], Field(max_length=3)]] = Field(default=None, description="Tags")
+    tags: Optional[Annotated[List[StrictStr], Field(max_length=3)]] = Field(default=None, description="Tags")
     password: Optional[StrictStr] = Field(default=None, description="Password")
     qrcode: Optional[CreateLinkRequestQrcode] = None
     utm: Optional[GetLink200ResponseUtm] = None
@@ -47,7 +47,7 @@ class CreateLinkRequest(BaseModel):
     expired_at: Optional[datetime] = Field(default=None, description="Scheduled expiration date")
     expired_url: Optional[StrictStr] = Field(default=None, description="Expiration URL")
     delete_after_expiration: Optional[StrictBool] = Field(default=False, description="Whether or not to remove the link after the expiry date")
-    __properties: ClassVar[List[str]] = ["url", "team_id", "folder_id", "domain", "code", "label", "", "password", "qrcode", "utm", "metatag", "delete_at", "expired_at", "expired_url", "delete_after_expiration"]
+    __properties: ClassVar[List[str]] = ["url", "team_id", "folder_id", "domain", "code", "label", "tags", "password", "qrcode", "utm", "metatag", "delete_at", "expired_at", "expired_url", "delete_after_expiration"]
 
     @field_validator('code')
     def code_validate_regular_expression(cls, value):
@@ -125,7 +125,7 @@ class CreateLinkRequest(BaseModel):
             "domain": obj.get("domain"),
             "code": obj.get("code"),
             "label": obj.get("label"),
-            "": obj.get(""),
+            "tags": obj.get("tags"),
             "password": obj.get("password"),
             "qrcode": CreateLinkRequestQrcode.from_dict(obj["qrcode"]) if obj.get("qrcode") is not None else None,
             "utm": GetLink200ResponseUtm.from_dict(obj["utm"]) if obj.get("utm") is not None else None,

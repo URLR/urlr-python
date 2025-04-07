@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.get_teams200_response_teams_inner import GetTeams200ResponseTeamsInner
+from urlr.models.get_link200_response_tags_inner import GetLink200ResponseTagsInner
 
-class TestGetTeams200ResponseTeamsInner(unittest.TestCase):
-    """GetTeams200ResponseTeamsInner unit test stubs"""
+class TestGetLink200ResponseTagsInner(unittest.TestCase):
+    """GetLink200ResponseTagsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,26 +26,26 @@ class TestGetTeams200ResponseTeamsInner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> GetTeams200ResponseTeamsInner:
-        """Test GetTeams200ResponseTeamsInner
+    def make_instance(self, include_optional) -> GetLink200ResponseTagsInner:
+        """Test GetLink200ResponseTagsInner
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `GetTeams200ResponseTeamsInner`
+        # uncomment below to create an instance of `GetLink200ResponseTagsInner`
         """
-        model = GetTeams200ResponseTeamsInner()
+        model = GetLink200ResponseTagsInner()
         if include_optional:
-            return GetTeams200ResponseTeamsInner(
-                id = 'ffefc6c4-d970-4373-a867-2a69c8be2c89',
-                name = 'the best team'
+            return GetLink200ResponseTagsInner(
+                id = '',
+                name = ''
             )
         else:
-            return GetTeams200ResponseTeamsInner(
+            return GetLink200ResponseTagsInner(
         )
         """
 
-    def testGetTeams200ResponseTeamsInner(self):
-        """Test GetTeams200ResponseTeamsInner"""
+    def testGetLink200ResponseTagsInner(self):
+        """Test GetLink200ResponseTagsInner"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

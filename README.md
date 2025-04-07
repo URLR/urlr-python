@@ -4,7 +4,7 @@
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 1.5
+- API version: 1.7
 - Package version: 2.7.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
  - [GetLink200ResponseGeolinksInner](docs/GetLink200ResponseGeolinksInner.md)
  - [GetLink200ResponseMetatag](docs/GetLink200ResponseMetatag.md)
  - [GetLink200ResponseQrcode](docs/GetLink200ResponseQrcode.md)
+ - [GetLink200ResponseTagsInner](docs/GetLink200ResponseTagsInner.md)
  - [GetLink200ResponseUtm](docs/GetLink200ResponseUtm.md)
  - [GetLink401Response](docs/GetLink401Response.md)
  - [GetLink404Response](docs/GetLink404Response.md)

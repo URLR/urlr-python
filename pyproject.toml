@@ -1,11 +1,11 @@
 [project]
 name = "urlr"
-version = "2.9.2"
+version = "2.9.3"
 description = "Python client for URLR"
 authors = [
   {name = "URLR",email = "contact@urlr.me"},
 ]
-license = "MIT"
+license-expression = "MIT"
 readme = "README.md"
 keywords = ["link shortener", "api", "sdk", "client"]
 requires-python = ">=3.9"

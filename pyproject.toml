@@ -1,6 +1,6 @@
 [project]
 name = "urlr"
-version = "2.9.0"
+version = "2.9.1"
 description = "Python client for URLR"
 authors = [
   {name = "URLR",email = "contact@urlr.me"},

@@ -22,7 +22,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "urlr"
-VERSION = "2.9.0"
+VERSION = "2.9.1"
 PYTHON_REQUIRES = ">= 3.9"
 REQUIRES = [
     "urllib3 >= 2.1.0, < 3.0.0",
@@ -42,7 +42,7 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
-    license="All rights reserved",
+    license="MIT",
     long_description_content_type='text/markdown',
     long_description="""\
     API powering the features of URLR.&lt;br&gt;&lt;br&gt;Note that in order to facilitate integration, we provide SDKs for various languages at https://github.com/URLR.&lt;br&gt;&lt;br&gt;Key API principles:&lt;br&gt;         &lt;ul&gt;&lt;li&gt;All dates follow **ISO-8601** format&lt;/li&gt;&lt;li&gt;Most errors follow **RFC 9457** standard&lt;/li&gt;&lt;li&gt;All responses are delivered in English&lt;/li&gt;&lt;/ul&gt;

@@ -5,9 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | Type of the geographic link | [optional] 
-**value** | **str** | Value corresponding to the type of the geographic link | [optional] 
-**url** | **str** | URL of the geographic link | [optional] 
+**conditions** | [**List[GetLink200ResponseGeolinksInnerConditionsInner]**](GetLink200ResponseGeolinksInnerConditionsInner.md) | Conditions for dynamic routing | [optional] 
+**url** | **str** | URL to redirect to when conditions match | [optional] 
 
 ## Example
 

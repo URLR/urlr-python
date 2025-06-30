@@ -1,11 +1,11 @@
-# urlr@2.8.1
+# urlr@2.9.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 1.7
-- Package version: 2.8.1
+- API version: 1.9
+- Package version: 2.9.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -14,7 +14,7 @@ For more information, please visit [https://urlr.me/en](https://urlr.me/en)
 
 ## Requirements
 
-Python 3.8+
+Python 3.9+
 
 ### pip install
 
@@ -95,6 +95,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccessTokensApi* | [**create_access_token**](docs/AccessTokensApi.md#create_access_token) | **POST** /access_tokens/create | Get an access token
 *AccessTokensApi* | [**refresh_access_token**](docs/AccessTokensApi.md#refresh_access_token) | **POST** /access_tokens/refresh | Refresh an access token
+*DomainsApi* | [**create_domain**](docs/DomainsApi.md#create_domain) | **POST** /domains/create | Create a domain
 *FoldersApi* | [**get_folders**](docs/FoldersApi.md#get_folders) | **GET** /folders/{team_id} | Get folders of team
 *LinksApi* | [**create_link**](docs/LinksApi.md#create_link) | **POST** /links/create | Create a link
 *LinksApi* | [**get_link**](docs/LinksApi.md#get_link) | **GET** /links/{link_id} | Get a link
@@ -108,6 +109,9 @@ Class | Method | HTTP request | Description
  - [CreateAccessToken200Response](docs/CreateAccessToken200Response.md)
  - [CreateAccessToken401Response](docs/CreateAccessToken401Response.md)
  - [CreateAccessTokenRequest](docs/CreateAccessTokenRequest.md)
+ - [CreateDomain200Response](docs/CreateDomain200Response.md)
+ - [CreateDomain409Response](docs/CreateDomain409Response.md)
+ - [CreateDomainRequest](docs/CreateDomainRequest.md)
  - [CreateLink429Response](docs/CreateLink429Response.md)
  - [CreateLink500Response](docs/CreateLink500Response.md)
  - [CreateLinkRequest](docs/CreateLinkRequest.md)
@@ -120,6 +124,7 @@ Class | Method | HTTP request | Description
  - [GetFolders200ResponseFoldersInner](docs/GetFolders200ResponseFoldersInner.md)
  - [GetLink200Response](docs/GetLink200Response.md)
  - [GetLink200ResponseGeolinksInner](docs/GetLink200ResponseGeolinksInner.md)
+ - [GetLink200ResponseGeolinksInnerConditionsInner](docs/GetLink200ResponseGeolinksInnerConditionsInner.md)
  - [GetLink200ResponseMetatag](docs/GetLink200ResponseMetatag.md)
  - [GetLink200ResponseQrcode](docs/GetLink200ResponseQrcode.md)
  - [GetLink200ResponseTagsInner](docs/GetLink200ResponseTagsInner.md)

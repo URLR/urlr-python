@@ -6,6 +6,9 @@ docs/AccessTokensApi.md
 docs/CreateAccessToken200Response.md
 docs/CreateAccessToken401Response.md
 docs/CreateAccessTokenRequest.md
+docs/CreateDomain200Response.md
+docs/CreateDomain409Response.md
+docs/CreateDomainRequest.md
 docs/CreateLink429Response.md
 docs/CreateLink500Response.md
 docs/CreateLinkRequest.md
@@ -14,11 +17,13 @@ docs/CreateLinkRequestQrcode.md
 docs/CreateQrCodeRequest.md
 docs/CreateQrCodeRequestOneOf.md
 docs/CreateQrCodeRequestOneOf1.md
+docs/DomainsApi.md
 docs/FoldersApi.md
 docs/GetFolders200Response.md
 docs/GetFolders200ResponseFoldersInner.md
 docs/GetLink200Response.md
 docs/GetLink200ResponseGeolinksInner.md
+docs/GetLink200ResponseGeolinksInnerConditionsInner.md
 docs/GetLink200ResponseMetatag.md
 docs/GetLink200ResponseQrcode.md
 docs/GetLink200ResponseTagsInner.md
@@ -46,6 +51,9 @@ test/test_access_tokens_api.py
 test/test_create_access_token200_response.py
 test/test_create_access_token401_response.py
 test/test_create_access_token_request.py
+test/test_create_domain200_response.py
+test/test_create_domain409_response.py
+test/test_create_domain_request.py
 test/test_create_link429_response.py
 test/test_create_link500_response.py
 test/test_create_link_request.py
@@ -54,11 +62,13 @@ test/test_create_link_request_qrcode.py
 test/test_create_qr_code_request.py
 test/test_create_qr_code_request_one_of.py
 test/test_create_qr_code_request_one_of1.py
+test/test_domains_api.py
 test/test_folders_api.py
 test/test_get_folders200_response.py
 test/test_get_folders200_response_folders_inner.py
 test/test_get_link200_response.py
 test/test_get_link200_response_geolinks_inner.py
+test/test_get_link200_response_geolinks_inner_conditions_inner.py
 test/test_get_link200_response_metatag.py
 test/test_get_link200_response_qrcode.py
 test/test_get_link200_response_tags_inner.py
@@ -80,6 +90,7 @@ tox.ini
 urlr/__init__.py
 urlr/api/__init__.py
 urlr/api/access_tokens_api.py
+urlr/api/domains_api.py
 urlr/api/folders_api.py
 urlr/api/links_api.py
 urlr/api/qr_codes_api.py
@@ -93,6 +104,9 @@ urlr/models/__init__.py
 urlr/models/create_access_token200_response.py
 urlr/models/create_access_token401_response.py
 urlr/models/create_access_token_request.py
+urlr/models/create_domain200_response.py
+urlr/models/create_domain409_response.py
+urlr/models/create_domain_request.py
 urlr/models/create_link429_response.py
 urlr/models/create_link500_response.py
 urlr/models/create_link_request.py
@@ -105,6 +119,7 @@ urlr/models/get_folders200_response.py
 urlr/models/get_folders200_response_folders_inner.py
 urlr/models/get_link200_response.py
 urlr/models/get_link200_response_geolinks_inner.py
+urlr/models/get_link200_response_geolinks_inner_conditions_inner.py
 urlr/models/get_link200_response_metatag.py
 urlr/models/get_link200_response_qrcode.py
 urlr/models/get_link200_response_tags_inner.py

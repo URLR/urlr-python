@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **link_id** | **str** | Link API ID | 
 **var_from** | **datetime** | Get statistics from this date | [optional] 
 **to** | **datetime** | Get statistics until this date | [optional] 
-**include_bots** | **bool** | Whether include bots or not in statistics | [optional] [default to False]
 
 ## Example
 

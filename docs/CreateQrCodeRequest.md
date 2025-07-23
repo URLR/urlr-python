@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **background_color** | **str** | The background color of the QR code (hexadecimal) | [optional] [default to '#ffffff']
 **foreground_color** | **str** | The foreground color of the QR code (hexadecimal) | [optional] [default to '#000000']
 **url** | **str** | URL of the QR Code | 
-**team_id** | **str** | Team API ID | 
+**team_id** | **str** | Workspace API ID | 
 **link_id** | **str** | Link API ID of the QR Code | 
 
 ## Example

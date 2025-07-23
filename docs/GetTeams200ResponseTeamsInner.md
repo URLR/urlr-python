@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Team API ID | [optional] 
-**name** | **str** | Team name | [optional] 
+**id** | **str** | Workspace API ID | [optional] 
+**name** | **str** | Workspace name | [optional] 
 
 ## Example
 

@@ -1,16 +1,16 @@
-# urlr.TeamsApi
+# urlr.WorkspacesApi
 
 All URIs are relative to *https://urlr.me/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_teams**](TeamsApi.md#get_teams) | **GET** /teams | Get teams of user
+[**get_teams**](WorkspacesApi.md#get_teams) | **GET** /teams | Get workspaces of user
 
 
 # **get_teams**
 > GetTeams200Response get_teams()
 
-Get teams of user
+Get workspaces of user
 
 ### Example
 
@@ -41,15 +41,15 @@ configuration = urlr.Configuration(
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = urlr.TeamsApi(api_client)
+    api_instance = urlr.WorkspacesApi(api_client)
 
     try:
-        # Get teams of user
+        # Get workspaces of user
         api_response = api_instance.get_teams()
-        print("The response of TeamsApi->get_teams:\n")
+        print("The response of WorkspacesApi->get_teams:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling TeamsApi->get_teams: %s\n" % e)
+        print("Exception when calling WorkspacesApi->get_teams: %s\n" % e)
 ```
 
 
@@ -75,7 +75,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Teams of user |  -  |
+**200** | Workspaces of user |  -  |
 **401** | Unauthorized |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

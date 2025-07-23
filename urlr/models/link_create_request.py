@@ -19,40 +19,47 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from urlr.models.get_link200_response_geolinks_inner import GetLink200ResponseGeolinksInner
-from urlr.models.get_link200_response_metatag import GetLink200ResponseMetatag
-from urlr.models.get_link200_response_qrcode import GetLink200ResponseQrcode
-from urlr.models.get_link200_response_tags_inner import GetLink200ResponseTagsInner
 from urlr.models.get_link200_response_utm import GetLink200ResponseUtm
+from urlr.models.link_base_request_metatag import LinkBaseRequestMetatag
+from urlr.models.link_base_request_qrcode import LinkBaseRequestQrcode
 from typing import Optional, Set
 from typing_extensions import Self
 
-class GetLink200Response(BaseModel):
+class LinkCreateRequest(BaseModel):
     """
-    GetLink200Response
+    LinkCreateRequest
     """ # noqa: E501
-    id: Optional[StrictStr] = Field(default=None, description="Link API ID")
-    url: Optional[StrictStr] = Field(default=None, description="Original URL")
-    team_id: Optional[StrictStr] = Field(default=None, description="Workspace API ID")
+    url: Annotated[str, Field(strict=True, max_length=4096)] = Field(description="URL to shorten")
     folder_id: Optional[StrictStr] = Field(default=None, description="Folder API ID")
     domain: Optional[StrictStr] = Field(default=None, description="Domain")
-    code: Optional[StrictStr] = Field(default=None, description="Short code")
+    code: Optional[Annotated[str, Field(strict=True)]] = Field(default=None, description="Custom short code")
     label: Optional[StrictStr] = Field(default=None, description="Label")
-    tags: Optional[Annotated[List[GetLink200ResponseTagsInner], Field(max_length=3)]] = Field(default=None, description="Tags")
-    qrcode: Optional[GetLink200ResponseQrcode] = None
+    tags: Optional[Annotated[List[StrictStr], Field(max_length=3)]] = Field(default=None, description="Tags")
+    password: Optional[StrictStr] = Field(default=None, description="Password")
+    qrcode: Optional[LinkBaseRequestQrcode] = None
     utm: Optional[GetLink200ResponseUtm] = None
-    metatag: Optional[GetLink200ResponseMetatag] = None
+    metatag: Optional[LinkBaseRequestMetatag] = None
     geolinks: Optional[List[GetLink200ResponseGeolinksInner]] = Field(default=None, description="Dynamic routing conditions")
-    created_at: Optional[datetime] = Field(default=None, description="Creation date")
-    updated_at: Optional[datetime] = Field(default=None, description="Modification date")
     delete_at: Optional[datetime] = Field(default=None, description="Scheduled deletion date")
     expired_at: Optional[datetime] = Field(default=None, description="Scheduled expiration date")
     expired_url: Optional[StrictStr] = Field(default=None, description="Expiration URL")
     delete_after_expiration: Optional[StrictBool] = Field(default=False, description="Whether or not to remove the link after the expiry date")
-    __properties: ClassVar[List[str]] = ["id", "url", "team_id", "folder_id", "domain", "code", "label", "tags", "qrcode", "utm", "metatag", "geolinks", "created_at", "updated_at", "delete_at", "expired_at", "expired_url", "delete_after_expiration"]
+    team_id: StrictStr = Field(description="Workspace API ID")
+    __properties: ClassVar[List[str]] = ["url", "folder_id", "domain", "code", "label", "tags", "password", "qrcode", "utm", "metatag", "geolinks", "delete_at", "expired_at", "expired_url", "delete_after_expiration", "team_id"]
+
+    @field_validator('code')
+    def code_validate_regular_expression(cls, value):
+        """Validates the regular expression"""
+        if value is None:
+            return value
+
+        if not re.match(r"^[a-zA-Z0-9!-]{2,50}$", value):
+            raise ValueError(r"must validate the regular expression /^[a-zA-Z0-9!-]{2,50}$/")
+        return value
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,7 +79,7 @@ class GetLink200Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of GetLink200Response from a JSON string"""
+        """Create an instance of LinkCreateRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -93,13 +100,6 @@ class GetLink200Response(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in tags (list)
-        _items = []
-        if self.tags:
-            for _item_tags in self.tags:
-                if _item_tags:
-                    _items.append(_item_tags.to_dict())
-            _dict['tags'] = _items
         # override the default output from pydantic by calling `to_dict()` of qrcode
         if self.qrcode:
             _dict['qrcode'] = self.qrcode.to_dict()
@@ -120,7 +120,7 @@ class GetLink200Response(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of GetLink200Response from a dict"""
+        """Create an instance of LinkCreateRequest from a dict"""
         if obj is None:
             return None
 
@@ -128,24 +128,22 @@ class GetLink200Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
             "url": obj.get("url"),
-            "team_id": obj.get("team_id"),
             "folder_id": obj.get("folder_id"),
             "domain": obj.get("domain"),
             "code": obj.get("code"),
             "label": obj.get("label"),
-            "tags": [GetLink200ResponseTagsInner.from_dict(_item) for _item in obj["tags"]] if obj.get("tags") is not None else None,
-            "qrcode": GetLink200ResponseQrcode.from_dict(obj["qrcode"]) if obj.get("qrcode") is not None else None,
+            "tags": obj.get("tags"),
+            "password": obj.get("password"),
+            "qrcode": LinkBaseRequestQrcode.from_dict(obj["qrcode"]) if obj.get("qrcode") is not None else None,
             "utm": GetLink200ResponseUtm.from_dict(obj["utm"]) if obj.get("utm") is not None else None,
-            "metatag": GetLink200ResponseMetatag.from_dict(obj["metatag"]) if obj.get("metatag") is not None else None,
+            "metatag": LinkBaseRequestMetatag.from_dict(obj["metatag"]) if obj.get("metatag") is not None else None,
             "geolinks": [GetLink200ResponseGeolinksInner.from_dict(_item) for _item in obj["geolinks"]] if obj.get("geolinks") is not None else None,
-            "created_at": obj.get("created_at"),
-            "updated_at": obj.get("updated_at"),
             "delete_at": obj.get("delete_at"),
             "expired_at": obj.get("expired_at"),
             "expired_url": obj.get("expired_url"),
-            "delete_after_expiration": obj.get("delete_after_expiration") if obj.get("delete_after_expiration") is not None else False
+            "delete_after_expiration": obj.get("delete_after_expiration") if obj.get("delete_after_expiration") is not None else False,
+            "team_id": obj.get("team_id")
         })
         return _obj
 

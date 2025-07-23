@@ -4,13 +4,13 @@ All URIs are relative to *https://urlr.me/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_folders**](FoldersApi.md#get_folders) | **GET** /folders/{team_id} | Get folders of team
+[**get_folders**](FoldersApi.md#get_folders) | **GET** /folders/{team_id} | Get folders of workspace
 
 
 # **get_folders**
 > GetFolders200Response get_folders(team_id)
 
-Get folders of team
+Get folders of workspace
 
 ### Example
 
@@ -42,10 +42,10 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.FoldersApi(api_client)
-    team_id = 'ffefc6c4-d970-4373-a867-2a69c8be2c89' # str | Team API ID
+    team_id = 'ffefc6c4-d970-4373-a867-2a69c8be2c89' # str | Workspace API ID
 
     try:
-        # Get folders of team
+        # Get folders of workspace
         api_response = api_instance.get_folders(team_id)
         print("The response of FoldersApi->get_folders:\n")
         pprint(api_response)
@@ -60,7 +60,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **team_id** | **str**| Team API ID | 
+ **team_id** | **str**| Workspace API ID | 
 
 ### Return type
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Folders of team |  -  |
+**200** | Folders of workspace |  -  |
 **404** | Not Found |  -  |
 **401** | Unauthorized |  -  |
 **422** | Validation Failed |  -  |

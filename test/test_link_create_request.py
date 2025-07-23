@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.get_link200_response import GetLink200Response
+from urlr.models.link_create_request import LinkCreateRequest
 
-class TestGetLink200Response(unittest.TestCase):
-    """GetLink200Response unit test stubs"""
+class TestLinkCreateRequest(unittest.TestCase):
+    """LinkCreateRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,36 +26,37 @@ class TestGetLink200Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> GetLink200Response:
-        """Test GetLink200Response
+    def make_instance(self, include_optional) -> LinkCreateRequest:
+        """Test LinkCreateRequest
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `GetLink200Response`
+        # uncomment below to create an instance of `LinkCreateRequest`
         """
-        model = GetLink200Response()
+        model = LinkCreateRequest()
         if include_optional:
-            return GetLink200Response(
-                id = '436b5d20-e174-4363-94e5-2b3dd4e74b5f',
+            return LinkCreateRequest(
                 url = '',
-                team_id = '',
                 folder_id = '',
-                domain = 'urlr.me',
+                domain = 'mybrand.com',
                 code = 'xxxxx',
                 label = '',
                 tags = [
-                    urlr.models.get_link_200_response_tags_inner.getLink_200_response_tags_inner(
-                        id = '', 
-                        name = '', )
+                    ''
                     ],
-                qrcode = urlr.models.get_link_200_response_qrcode.getLink_200_response_qrcode(
-                    data = '', ),
+                password = '',
+                qrcode = urlr.models.link_base_request_qrcode.LinkBaseRequest_qrcode(
+                    size = 100, 
+                    format = 'png', 
+                    margin = 56, 
+                    background_color = '#ffffff', 
+                    foreground_color = '#000000', ),
                 utm = urlr.models.get_link_200_response_utm.getLink_200_response_utm(
                     campaign = '', 
                     medium = '', 
                     source = '', 
                     content = '', ),
-                metatag = urlr.models.get_link_200_response_metatag.getLink_200_response_metatag(
+                metatag = urlr.models.link_base_request_metatag.LinkBaseRequest_metatag(
                     title = '', 
                     description = '', 
                     image = '', ),
@@ -69,20 +70,21 @@ class TestGetLink200Response(unittest.TestCase):
                             ], 
                         url = '', )
                     ],
-                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 delete_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 expired_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 expired_url = '',
-                delete_after_expiration = True
+                delete_after_expiration = True,
+                team_id = ''
             )
         else:
-            return GetLink200Response(
+            return LinkCreateRequest(
+                url = '',
+                team_id = '',
         )
         """
 
-    def testGetLink200Response(self):
-        """Test GetLink200Response"""
+    def testLinkCreateRequest(self):
+        """Test LinkCreateRequest"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

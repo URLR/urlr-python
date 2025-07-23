@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.10.0] - 2025-07-23
+
+- Updated URLR API version to 1.10
+
 ## [2.9.4] - 2025-06-30
 
 - Fix Python build

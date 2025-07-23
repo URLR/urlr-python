@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **link_id** | **str** | Link API ID | [optional] 
-**clicks** | **int** | Clicks | [optional] 
-**unique_clicks** | **int** | Unique clicks | [optional] 
+**clicks** | **int** | Total number of visits, combining clicks and scans | [optional] 
+**unique_clicks** | **int** | Number of unique visitors, combining clicks and scans | [optional] 
 
 ## Example
 

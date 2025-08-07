@@ -1,11 +1,11 @@
-# urlr@2.11.0
+# urlr@2.11.1
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
 - API version: 1.10
-- Package version: 2.11.0
+- Package version: 2.11.1
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -50,39 +50,50 @@ Execute `pytest` to run the tests.
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
+import os
 import urlr
 from urlr.rest import ApiException
-from pprint import pprint
+
+username = os.getenv("URLR_API_USERNAME")  # to be defined on your side
+password = os.getenv("URLR_API_PASSWORD")  # to be defined on your side
+
 
 # Access Tokens
 
-with urlr.ApiClient() as api_client:
-    access_tokens_api = urlr.AccessTokensApi(api_client)
-    
-    access_tokens_request = urlr.AccessTokensRequest.from_json('{"username": "","password": ""}')
+configuration = urlr.Configuration()
+
+with urlr.ApiClient(configuration) as api_client:
+    access_token_api = urlr.AccessTokensApi(api_client)
+
+    create_access_token_request = urlr.CreateAccessTokenRequest(
+        username=username,
+        password=password,
+    )
 
     try:
-        api_response = access_tokens_api.create_access_token(access_tokens_request=access_tokens_request)
+        api_response = access_token_api.create_access_token(
+            create_access_token_request=create_access_token_request)
     except ApiException as e:
         print("Exception when calling AccessTokensApi->create_access_token: %s\n" % e)
         quit()
 
-# Link shortening
+configuration.access_token = api_response.token
 
-configuration = urlr.Configuration(
-    access_token = api_response.token
-)
+# Create a link
 
 with urlr.ApiClient(configuration) as api_client:
-    link_api = urlr.LinksApi(api_client)
-    create_link_request = urlr.CreateLinkRequest.from_json('{"url": "","team_id": ""}')
+    links_api = urlr.LinksApi(api_client)
+    create_link_request = urlr.CreateLinkRequest(
+        url="",
+        team_id=""
+    )
 
     try:
-        # Create a link
-        api_response = link_api.create_link(create_link_request=create_link_request)
-        print(api_response)
+        link = links_api.create_link(
+            create_link_request=create_link_request)
     except Exception as e:
         print("Exception when calling LinksApi->create_link: %s\n" % e)
+
 ```
 
 A complete example is [available here](examples/example1.py).

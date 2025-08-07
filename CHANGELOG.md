@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.11.1] - 2025-08-07
+- Better documentation and examples.
+
 ## [2.11.0] - 2025-08-07
 
 ### Changed

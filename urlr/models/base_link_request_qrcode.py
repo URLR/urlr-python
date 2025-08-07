@@ -24,7 +24,7 @@ from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
 
-class LinkBaseRequestQrcode(BaseModel):
+class BaseLinkRequestQrcode(BaseModel):
     """
     QR Code
     """ # noqa: E501
@@ -63,7 +63,7 @@ class LinkBaseRequestQrcode(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of LinkBaseRequestQrcode from a JSON string"""
+        """Create an instance of BaseLinkRequestQrcode from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -88,7 +88,7 @@ class LinkBaseRequestQrcode(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of LinkBaseRequestQrcode from a dict"""
+        """Create an instance of BaseLinkRequestQrcode from a dict"""
         if obj is None:
             return None
 

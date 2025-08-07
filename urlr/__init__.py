@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "2.10.3"
+__version__ = "2.11.0"
 
 # Define package exports
 __all__ = [
@@ -35,6 +35,9 @@ __all__ = [
     "ApiKeyError",
     "ApiAttributeError",
     "ApiException",
+    "BaseLinkRequest",
+    "BaseLinkRequestMetatag",
+    "BaseLinkRequestQrcode",
     "CreateAccessToken200Response",
     "CreateAccessToken401Response",
     "CreateAccessTokenRequest",
@@ -42,10 +45,12 @@ __all__ = [
     "CreateDomain409Response",
     "CreateDomainRequest",
     "CreateLink429Response",
+    "CreateLinkRequest",
     "CreateQrCodeRequest",
     "CreateQrCodeRequestOneOf",
     "CreateQrCodeRequestOneOf1",
     "EditLink500Response",
+    "EditLinkRequest",
     "GetFolders200Response",
     "GetFolders200ResponseFoldersInner",
     "GetLink200Response",
@@ -62,11 +67,6 @@ __all__ = [
     "GetStatisticsRequest",
     "GetTeams200Response",
     "GetTeams200ResponseTeamsInner",
-    "LinkBaseRequest",
-    "LinkBaseRequestMetatag",
-    "LinkBaseRequestQrcode",
-    "LinkCreateRequest",
-    "LinkEditRequest",
     "RefreshAccessToken401Response",
     "RefreshAccessTokenRequest",
 ]
@@ -92,6 +92,9 @@ from urlr.exceptions import ApiAttributeError as ApiAttributeError
 from urlr.exceptions import ApiException as ApiException
 
 # import models into sdk package
+from urlr.models.base_link_request import BaseLinkRequest as BaseLinkRequest
+from urlr.models.base_link_request_metatag import BaseLinkRequestMetatag as BaseLinkRequestMetatag
+from urlr.models.base_link_request_qrcode import BaseLinkRequestQrcode as BaseLinkRequestQrcode
 from urlr.models.create_access_token200_response import CreateAccessToken200Response as CreateAccessToken200Response
 from urlr.models.create_access_token401_response import CreateAccessToken401Response as CreateAccessToken401Response
 from urlr.models.create_access_token_request import CreateAccessTokenRequest as CreateAccessTokenRequest
@@ -99,10 +102,12 @@ from urlr.models.create_domain200_response import CreateDomain200Response as Cre
 from urlr.models.create_domain409_response import CreateDomain409Response as CreateDomain409Response
 from urlr.models.create_domain_request import CreateDomainRequest as CreateDomainRequest
 from urlr.models.create_link429_response import CreateLink429Response as CreateLink429Response
+from urlr.models.create_link_request import CreateLinkRequest as CreateLinkRequest
 from urlr.models.create_qr_code_request import CreateQrCodeRequest as CreateQrCodeRequest
 from urlr.models.create_qr_code_request_one_of import CreateQrCodeRequestOneOf as CreateQrCodeRequestOneOf
 from urlr.models.create_qr_code_request_one_of1 import CreateQrCodeRequestOneOf1 as CreateQrCodeRequestOneOf1
 from urlr.models.edit_link500_response import EditLink500Response as EditLink500Response
+from urlr.models.edit_link_request import EditLinkRequest as EditLinkRequest
 from urlr.models.get_folders200_response import GetFolders200Response as GetFolders200Response
 from urlr.models.get_folders200_response_folders_inner import GetFolders200ResponseFoldersInner as GetFolders200ResponseFoldersInner
 from urlr.models.get_link200_response import GetLink200Response as GetLink200Response
@@ -119,10 +124,5 @@ from urlr.models.get_statistics200_response import GetStatistics200Response as G
 from urlr.models.get_statistics_request import GetStatisticsRequest as GetStatisticsRequest
 from urlr.models.get_teams200_response import GetTeams200Response as GetTeams200Response
 from urlr.models.get_teams200_response_teams_inner import GetTeams200ResponseTeamsInner as GetTeams200ResponseTeamsInner
-from urlr.models.link_base_request import LinkBaseRequest as LinkBaseRequest
-from urlr.models.link_base_request_metatag import LinkBaseRequestMetatag as LinkBaseRequestMetatag
-from urlr.models.link_base_request_qrcode import LinkBaseRequestQrcode as LinkBaseRequestQrcode
-from urlr.models.link_create_request import LinkCreateRequest as LinkCreateRequest
-from urlr.models.link_edit_request import LinkEditRequest as LinkEditRequest
 from urlr.models.refresh_access_token401_response import RefreshAccessToken401Response as RefreshAccessToken401Response
 from urlr.models.refresh_access_token_request import RefreshAccessTokenRequest as RefreshAccessTokenRequest

@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.link_base_request_qrcode import LinkBaseRequestQrcode
+from urlr.models.base_link_request_metatag import BaseLinkRequestMetatag
 
-class TestLinkBaseRequestQrcode(unittest.TestCase):
-    """LinkBaseRequestQrcode unit test stubs"""
+class TestBaseLinkRequestMetatag(unittest.TestCase):
+    """BaseLinkRequestMetatag unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,29 +26,27 @@ class TestLinkBaseRequestQrcode(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> LinkBaseRequestQrcode:
-        """Test LinkBaseRequestQrcode
+    def make_instance(self, include_optional) -> BaseLinkRequestMetatag:
+        """Test BaseLinkRequestMetatag
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `LinkBaseRequestQrcode`
+        # uncomment below to create an instance of `BaseLinkRequestMetatag`
         """
-        model = LinkBaseRequestQrcode()
+        model = BaseLinkRequestMetatag()
         if include_optional:
-            return LinkBaseRequestQrcode(
-                size = 100,
-                format = 'png',
-                margin = 56,
-                background_color = '#ffffff',
-                foreground_color = '#000000'
+            return BaseLinkRequestMetatag(
+                title = '',
+                description = '',
+                image = ''
             )
         else:
-            return LinkBaseRequestQrcode(
+            return BaseLinkRequestMetatag(
         )
         """
 
-    def testLinkBaseRequestQrcode(self):
-        """Test LinkBaseRequestQrcode"""
+    def testBaseLinkRequestMetatag(self):
+        """Test BaseLinkRequestMetatag"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

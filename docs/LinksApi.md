@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **create_link**
-> GetLink200Response create_link(link_create_request=link_create_request)
+> GetLink200Response create_link(create_link_request=create_link_request)
 
 Create a link
 
@@ -20,8 +20,8 @@ Create a link
 
 ```python
 import urlr
+from urlr.models.create_link_request import CreateLinkRequest
 from urlr.models.get_link200_response import GetLink200Response
-from urlr.models.link_create_request import LinkCreateRequest
 from urlr.rest import ApiException
 from pprint import pprint
 
@@ -45,11 +45,11 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    link_create_request = urlr.LinkCreateRequest() # LinkCreateRequest | Info of the link to create (optional)
+    create_link_request = urlr.CreateLinkRequest() # CreateLinkRequest | Info of the link to create (optional)
 
     try:
         # Create a link
-        api_response = api_instance.create_link(link_create_request=link_create_request)
+        api_response = api_instance.create_link(create_link_request=create_link_request)
         print("The response of LinksApi->create_link:\n")
         pprint(api_response)
     except Exception as e:
@@ -63,7 +63,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **link_create_request** | [**LinkCreateRequest**](LinkCreateRequest.md)| Info of the link to create | [optional] 
+ **create_link_request** | [**CreateLinkRequest**](CreateLinkRequest.md)| Info of the link to create | [optional] 
 
 ### Return type
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **edit_link**
-> GetLink200Response edit_link(link_id, link_edit_request=link_edit_request)
+> GetLink200Response edit_link(link_id, edit_link_request=edit_link_request)
 
 Edit a link
 
@@ -101,8 +101,8 @@ Edit a link
 
 ```python
 import urlr
+from urlr.models.edit_link_request import EditLinkRequest
 from urlr.models.get_link200_response import GetLink200Response
-from urlr.models.link_edit_request import LinkEditRequest
 from urlr.rest import ApiException
 from pprint import pprint
 
@@ -127,11 +127,11 @@ with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
     link_id = 'ffefc6c4-d970-4373-a867-2a69c8be2c89' # str | Link API ID
-    link_edit_request = urlr.LinkEditRequest() # LinkEditRequest | Info of the link to edit (optional)
+    edit_link_request = urlr.EditLinkRequest() # EditLinkRequest | Info of the link to edit (optional)
 
     try:
         # Edit a link
-        api_response = api_instance.edit_link(link_id, link_edit_request=link_edit_request)
+        api_response = api_instance.edit_link(link_id, edit_link_request=edit_link_request)
         print("The response of LinksApi->edit_link:\n")
         pprint(api_response)
     except Exception as e:
@@ -146,7 +146,7 @@ with urlr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **link_id** | **str**| Link API ID | 
- **link_edit_request** | [**LinkEditRequest**](LinkEditRequest.md)| Info of the link to edit | [optional] 
+ **edit_link_request** | [**EditLinkRequest**](EditLinkRequest.md)| Info of the link to edit | [optional] 
 
 ### Return type
 

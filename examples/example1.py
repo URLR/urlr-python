@@ -38,7 +38,7 @@ with urlr.ApiClient(configuration) as api_client:
     statistics_request = urlr.StatisticsRequest.from_json('{"link_id": ""}')
 
     try:
-        api_response = statistics_api.statistics(statistics_request=statistics_request)
+        api_response = statistics_api.get_statistics(statistics_request=statistics_request)
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling StatisticsApi->statistics: %s\n" % e)
+        print("Exception when calling StatisticsApi->get_statistics: %s\n" % e)

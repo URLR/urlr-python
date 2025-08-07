@@ -1,4 +1,4 @@
-# LinkBaseRequestMetatag
+# BaseLinkRequestMetatag
 
 Custom metadata for social previews
 
@@ -13,19 +13,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from urlr.models.link_base_request_metatag import LinkBaseRequestMetatag
+from urlr.models.base_link_request_metatag import BaseLinkRequestMetatag
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of LinkBaseRequestMetatag from a JSON string
-link_base_request_metatag_instance = LinkBaseRequestMetatag.from_json(json)
+# create an instance of BaseLinkRequestMetatag from a JSON string
+base_link_request_metatag_instance = BaseLinkRequestMetatag.from_json(json)
 # print the JSON string representation of the object
-print(LinkBaseRequestMetatag.to_json())
+print(BaseLinkRequestMetatag.to_json())
 
 # convert the object into a dict
-link_base_request_metatag_dict = link_base_request_metatag_instance.to_dict()
-# create an instance of LinkBaseRequestMetatag from a dict
-link_base_request_metatag_from_dict = LinkBaseRequestMetatag.from_dict(link_base_request_metatag_dict)
+base_link_request_metatag_dict = base_link_request_metatag_instance.to_dict()
+# create an instance of BaseLinkRequestMetatag from a dict
+base_link_request_metatag_from_dict = BaseLinkRequestMetatag.from_dict(base_link_request_metatag_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

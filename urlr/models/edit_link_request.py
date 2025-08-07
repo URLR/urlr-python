@@ -22,16 +22,16 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from urlr.models.base_link_request_metatag import BaseLinkRequestMetatag
+from urlr.models.base_link_request_qrcode import BaseLinkRequestQrcode
 from urlr.models.get_link200_response_geolinks_inner import GetLink200ResponseGeolinksInner
 from urlr.models.get_link200_response_utm import GetLink200ResponseUtm
-from urlr.models.link_base_request_metatag import LinkBaseRequestMetatag
-from urlr.models.link_base_request_qrcode import LinkBaseRequestQrcode
 from typing import Optional, Set
 from typing_extensions import Self
 
-class LinkBaseRequest(BaseModel):
+class EditLinkRequest(BaseModel):
     """
-    LinkBaseRequest
+    EditLinkRequest
     """ # noqa: E501
     url: Optional[Annotated[str, Field(strict=True, max_length=4096)]] = Field(default=None, description="URL to shorten")
     folder_id: Optional[StrictStr] = Field(default=None, description="Folder API ID")
@@ -40,9 +40,9 @@ class LinkBaseRequest(BaseModel):
     label: Optional[StrictStr] = Field(default=None, description="Label")
     tags: Optional[Annotated[List[StrictStr], Field(max_length=3)]] = Field(default=None, description="Tags")
     password: Optional[StrictStr] = Field(default=None, description="Password")
-    qrcode: Optional[LinkBaseRequestQrcode] = None
+    qrcode: Optional[BaseLinkRequestQrcode] = None
     utm: Optional[GetLink200ResponseUtm] = None
-    metatag: Optional[LinkBaseRequestMetatag] = None
+    metatag: Optional[BaseLinkRequestMetatag] = None
     geolinks: Optional[List[GetLink200ResponseGeolinksInner]] = Field(default=None, description="Dynamic routing conditions")
     delete_at: Optional[datetime] = Field(default=None, description="Scheduled deletion date")
     expired_at: Optional[datetime] = Field(default=None, description="Scheduled expiration date")
@@ -78,7 +78,7 @@ class LinkBaseRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of LinkBaseRequest from a JSON string"""
+        """Create an instance of EditLinkRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -119,7 +119,7 @@ class LinkBaseRequest(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of LinkBaseRequest from a dict"""
+        """Create an instance of EditLinkRequest from a dict"""
         if obj is None:
             return None
 
@@ -134,9 +134,9 @@ class LinkBaseRequest(BaseModel):
             "label": obj.get("label"),
             "tags": obj.get("tags"),
             "password": obj.get("password"),
-            "qrcode": LinkBaseRequestQrcode.from_dict(obj["qrcode"]) if obj.get("qrcode") is not None else None,
+            "qrcode": BaseLinkRequestQrcode.from_dict(obj["qrcode"]) if obj.get("qrcode") is not None else None,
             "utm": GetLink200ResponseUtm.from_dict(obj["utm"]) if obj.get("utm") is not None else None,
-            "metatag": LinkBaseRequestMetatag.from_dict(obj["metatag"]) if obj.get("metatag") is not None else None,
+            "metatag": BaseLinkRequestMetatag.from_dict(obj["metatag"]) if obj.get("metatag") is not None else None,
             "geolinks": [GetLink200ResponseGeolinksInner.from_dict(_item) for _item in obj["geolinks"]] if obj.get("geolinks") is not None else None,
             "delete_at": obj.get("delete_at"),
             "expired_at": obj.get("expired_at"),

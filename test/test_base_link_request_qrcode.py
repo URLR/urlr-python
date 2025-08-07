@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.link_base_request_metatag import LinkBaseRequestMetatag
+from urlr.models.base_link_request_qrcode import BaseLinkRequestQrcode
 
-class TestLinkBaseRequestMetatag(unittest.TestCase):
-    """LinkBaseRequestMetatag unit test stubs"""
+class TestBaseLinkRequestQrcode(unittest.TestCase):
+    """BaseLinkRequestQrcode unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,27 +26,29 @@ class TestLinkBaseRequestMetatag(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> LinkBaseRequestMetatag:
-        """Test LinkBaseRequestMetatag
+    def make_instance(self, include_optional) -> BaseLinkRequestQrcode:
+        """Test BaseLinkRequestQrcode
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `LinkBaseRequestMetatag`
+        # uncomment below to create an instance of `BaseLinkRequestQrcode`
         """
-        model = LinkBaseRequestMetatag()
+        model = BaseLinkRequestQrcode()
         if include_optional:
-            return LinkBaseRequestMetatag(
-                title = '',
-                description = '',
-                image = ''
+            return BaseLinkRequestQrcode(
+                size = 100,
+                format = 'png',
+                margin = 56,
+                background_color = '#ffffff',
+                foreground_color = '#000000'
             )
         else:
-            return LinkBaseRequestMetatag(
+            return BaseLinkRequestQrcode(
         )
         """
 
-    def testLinkBaseRequestMetatag(self):
-        """Test LinkBaseRequestMetatag"""
+    def testBaseLinkRequestQrcode(self):
+        """Test BaseLinkRequestQrcode"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

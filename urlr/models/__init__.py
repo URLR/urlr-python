@@ -15,6 +15,9 @@
 
 
 # import models into model package
+from urlr.models.base_link_request import BaseLinkRequest
+from urlr.models.base_link_request_metatag import BaseLinkRequestMetatag
+from urlr.models.base_link_request_qrcode import BaseLinkRequestQrcode
 from urlr.models.create_access_token200_response import CreateAccessToken200Response
 from urlr.models.create_access_token401_response import CreateAccessToken401Response
 from urlr.models.create_access_token_request import CreateAccessTokenRequest
@@ -22,10 +25,12 @@ from urlr.models.create_domain200_response import CreateDomain200Response
 from urlr.models.create_domain409_response import CreateDomain409Response
 from urlr.models.create_domain_request import CreateDomainRequest
 from urlr.models.create_link429_response import CreateLink429Response
+from urlr.models.create_link_request import CreateLinkRequest
 from urlr.models.create_qr_code_request import CreateQrCodeRequest
 from urlr.models.create_qr_code_request_one_of import CreateQrCodeRequestOneOf
 from urlr.models.create_qr_code_request_one_of1 import CreateQrCodeRequestOneOf1
 from urlr.models.edit_link500_response import EditLink500Response
+from urlr.models.edit_link_request import EditLinkRequest
 from urlr.models.get_folders200_response import GetFolders200Response
 from urlr.models.get_folders200_response_folders_inner import GetFolders200ResponseFoldersInner
 from urlr.models.get_link200_response import GetLink200Response
@@ -42,10 +47,5 @@ from urlr.models.get_statistics200_response import GetStatistics200Response
 from urlr.models.get_statistics_request import GetStatisticsRequest
 from urlr.models.get_teams200_response import GetTeams200Response
 from urlr.models.get_teams200_response_teams_inner import GetTeams200ResponseTeamsInner
-from urlr.models.link_base_request import LinkBaseRequest
-from urlr.models.link_base_request_metatag import LinkBaseRequestMetatag
-from urlr.models.link_base_request_qrcode import LinkBaseRequestQrcode
-from urlr.models.link_create_request import LinkCreateRequest
-from urlr.models.link_edit_request import LinkEditRequest
 from urlr.models.refresh_access_token401_response import RefreshAccessToken401Response
 from urlr.models.refresh_access_token_request import RefreshAccessTokenRequest

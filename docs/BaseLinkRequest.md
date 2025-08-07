@@ -1,4 +1,4 @@
-# LinkBaseRequest
+# BaseLinkRequest
 
 
 ## Properties
@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 **label** | **str** | Label | [optional] 
 **tags** | **List[str]** | Tags | [optional] 
 **password** | **str** | Password | [optional] 
-**qrcode** | [**LinkBaseRequestQrcode**](LinkBaseRequestQrcode.md) |  | [optional] 
+**qrcode** | [**BaseLinkRequestQrcode**](BaseLinkRequestQrcode.md) |  | [optional] 
 **utm** | [**GetLink200ResponseUtm**](GetLink200ResponseUtm.md) |  | [optional] 
-**metatag** | [**LinkBaseRequestMetatag**](LinkBaseRequestMetatag.md) |  | [optional] 
+**metatag** | [**BaseLinkRequestMetatag**](BaseLinkRequestMetatag.md) |  | [optional] 
 **geolinks** | [**List[GetLink200ResponseGeolinksInner]**](GetLink200ResponseGeolinksInner.md) | Dynamic routing conditions | [optional] 
 **delete_at** | **datetime** | Scheduled deletion date | [optional] 
 **expired_at** | **datetime** | Scheduled expiration date | [optional] 
@@ -24,19 +24,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from urlr.models.link_base_request import LinkBaseRequest
+from urlr.models.base_link_request import BaseLinkRequest
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of LinkBaseRequest from a JSON string
-link_base_request_instance = LinkBaseRequest.from_json(json)
+# create an instance of BaseLinkRequest from a JSON string
+base_link_request_instance = BaseLinkRequest.from_json(json)
 # print the JSON string representation of the object
-print(LinkBaseRequest.to_json())
+print(BaseLinkRequest.to_json())
 
 # convert the object into a dict
-link_base_request_dict = link_base_request_instance.to_dict()
-# create an instance of LinkBaseRequest from a dict
-link_base_request_from_dict = LinkBaseRequest.from_dict(link_base_request_dict)
+base_link_request_dict = base_link_request_instance.to_dict()
+# create an instance of BaseLinkRequest from a dict
+base_link_request_from_dict = BaseLinkRequest.from_dict(base_link_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.link_base_request import LinkBaseRequest
+from urlr.models.base_link_request import BaseLinkRequest
 
-class TestLinkBaseRequest(unittest.TestCase):
-    """LinkBaseRequest unit test stubs"""
+class TestBaseLinkRequest(unittest.TestCase):
+    """BaseLinkRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,16 +26,16 @@ class TestLinkBaseRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> LinkBaseRequest:
-        """Test LinkBaseRequest
+    def make_instance(self, include_optional) -> BaseLinkRequest:
+        """Test BaseLinkRequest
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `LinkBaseRequest`
+        # uncomment below to create an instance of `BaseLinkRequest`
         """
-        model = LinkBaseRequest()
+        model = BaseLinkRequest()
         if include_optional:
-            return LinkBaseRequest(
+            return BaseLinkRequest(
                 url = '',
                 folder_id = '',
                 domain = 'mybrand.com',
@@ -45,7 +45,7 @@ class TestLinkBaseRequest(unittest.TestCase):
                     ''
                     ],
                 password = '',
-                qrcode = urlr.models.link_base_request_qrcode.LinkBaseRequest_qrcode(
+                qrcode = urlr.models.base_link_request_qrcode.BaseLinkRequest_qrcode(
                     size = 100, 
                     format = 'png', 
                     margin = 56, 
@@ -56,7 +56,7 @@ class TestLinkBaseRequest(unittest.TestCase):
                     medium = '', 
                     source = '', 
                     content = '', ),
-                metatag = urlr.models.link_base_request_metatag.LinkBaseRequest_metatag(
+                metatag = urlr.models.base_link_request_metatag.BaseLinkRequest_metatag(
                     title = '', 
                     description = '', 
                     image = '', ),
@@ -76,12 +76,12 @@ class TestLinkBaseRequest(unittest.TestCase):
                 delete_after_expiration = True
             )
         else:
-            return LinkBaseRequest(
+            return BaseLinkRequest(
         )
         """
 
-    def testLinkBaseRequest(self):
-        """Test LinkBaseRequest"""
+    def testBaseLinkRequest(self):
+        """Test BaseLinkRequest"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

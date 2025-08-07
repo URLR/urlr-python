@@ -15,10 +15,10 @@
 
 import unittest
 
-from urlr.models.link_create_request import LinkCreateRequest
+from urlr.models.edit_link_request import EditLinkRequest
 
-class TestLinkCreateRequest(unittest.TestCase):
-    """LinkCreateRequest unit test stubs"""
+class TestEditLinkRequest(unittest.TestCase):
+    """EditLinkRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,16 +26,16 @@ class TestLinkCreateRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> LinkCreateRequest:
-        """Test LinkCreateRequest
+    def make_instance(self, include_optional) -> EditLinkRequest:
+        """Test EditLinkRequest
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `LinkCreateRequest`
+        # uncomment below to create an instance of `EditLinkRequest`
         """
-        model = LinkCreateRequest()
+        model = EditLinkRequest()
         if include_optional:
-            return LinkCreateRequest(
+            return EditLinkRequest(
                 url = '',
                 folder_id = '',
                 domain = 'mybrand.com',
@@ -45,7 +45,7 @@ class TestLinkCreateRequest(unittest.TestCase):
                     ''
                     ],
                 password = '',
-                qrcode = urlr.models.link_base_request_qrcode.LinkBaseRequest_qrcode(
+                qrcode = urlr.models.base_link_request_qrcode.BaseLinkRequest_qrcode(
                     size = 100, 
                     format = 'png', 
                     margin = 56, 
@@ -56,7 +56,7 @@ class TestLinkCreateRequest(unittest.TestCase):
                     medium = '', 
                     source = '', 
                     content = '', ),
-                metatag = urlr.models.link_base_request_metatag.LinkBaseRequest_metatag(
+                metatag = urlr.models.base_link_request_metatag.BaseLinkRequest_metatag(
                     title = '', 
                     description = '', 
                     image = '', ),
@@ -73,18 +73,15 @@ class TestLinkCreateRequest(unittest.TestCase):
                 delete_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 expired_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 expired_url = '',
-                delete_after_expiration = True,
-                team_id = ''
+                delete_after_expiration = True
             )
         else:
-            return LinkCreateRequest(
-                url = '',
-                team_id = '',
+            return EditLinkRequest(
         )
         """
 
-    def testLinkCreateRequest(self):
-        """Test LinkCreateRequest"""
+    def testEditLinkRequest(self):
+        """Test EditLinkRequest"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

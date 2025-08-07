@@ -20,9 +20,9 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing import Optional
 from typing_extensions import Annotated
+from urlr.models.create_link_request import CreateLinkRequest
+from urlr.models.edit_link_request import EditLinkRequest
 from urlr.models.get_link200_response import GetLink200Response
-from urlr.models.link_create_request import LinkCreateRequest
-from urlr.models.link_edit_request import LinkEditRequest
 
 from urlr.api_client import ApiClient, RequestSerialized
 from urlr.api_response import ApiResponse
@@ -45,7 +45,7 @@ class LinksApi:
     @validate_call
     def create_link(
         self,
-        link_create_request: Annotated[Optional[LinkCreateRequest], Field(description="Info of the link to create")] = None,
+        create_link_request: Annotated[Optional[CreateLinkRequest], Field(description="Info of the link to create")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -62,8 +62,8 @@ class LinksApi:
         """Create a link
 
 
-        :param link_create_request: Info of the link to create
-        :type link_create_request: LinkCreateRequest
+        :param create_link_request: Info of the link to create
+        :type create_link_request: CreateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -87,7 +87,7 @@ class LinksApi:
         """ # noqa: E501
 
         _param = self._create_link_serialize(
-            link_create_request=link_create_request,
+            create_link_request=create_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -115,7 +115,7 @@ class LinksApi:
     @validate_call
     def create_link_with_http_info(
         self,
-        link_create_request: Annotated[Optional[LinkCreateRequest], Field(description="Info of the link to create")] = None,
+        create_link_request: Annotated[Optional[CreateLinkRequest], Field(description="Info of the link to create")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -132,8 +132,8 @@ class LinksApi:
         """Create a link
 
 
-        :param link_create_request: Info of the link to create
-        :type link_create_request: LinkCreateRequest
+        :param create_link_request: Info of the link to create
+        :type create_link_request: CreateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -157,7 +157,7 @@ class LinksApi:
         """ # noqa: E501
 
         _param = self._create_link_serialize(
-            link_create_request=link_create_request,
+            create_link_request=create_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -185,7 +185,7 @@ class LinksApi:
     @validate_call
     def create_link_without_preload_content(
         self,
-        link_create_request: Annotated[Optional[LinkCreateRequest], Field(description="Info of the link to create")] = None,
+        create_link_request: Annotated[Optional[CreateLinkRequest], Field(description="Info of the link to create")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -202,8 +202,8 @@ class LinksApi:
         """Create a link
 
 
-        :param link_create_request: Info of the link to create
-        :type link_create_request: LinkCreateRequest
+        :param create_link_request: Info of the link to create
+        :type create_link_request: CreateLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -227,7 +227,7 @@ class LinksApi:
         """ # noqa: E501
 
         _param = self._create_link_serialize(
-            link_create_request=link_create_request,
+            create_link_request=create_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -250,7 +250,7 @@ class LinksApi:
 
     def _create_link_serialize(
         self,
-        link_create_request,
+        create_link_request,
         _request_auth,
         _content_type,
         _headers,
@@ -276,8 +276,8 @@ class LinksApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if link_create_request is not None:
-            _body_params = link_create_request
+        if create_link_request is not None:
+            _body_params = create_link_request
 
 
         # set the HTTP header `Accept`
@@ -330,7 +330,7 @@ class LinksApi:
     def edit_link(
         self,
         link_id: Annotated[StrictStr, Field(description="Link API ID")],
-        link_edit_request: Annotated[Optional[LinkEditRequest], Field(description="Info of the link to edit")] = None,
+        edit_link_request: Annotated[Optional[EditLinkRequest], Field(description="Info of the link to edit")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -349,8 +349,8 @@ class LinksApi:
 
         :param link_id: Link API ID (required)
         :type link_id: str
-        :param link_edit_request: Info of the link to edit
-        :type link_edit_request: LinkEditRequest
+        :param edit_link_request: Info of the link to edit
+        :type edit_link_request: EditLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -375,7 +375,7 @@ class LinksApi:
 
         _param = self._edit_link_serialize(
             link_id=link_id,
-            link_edit_request=link_edit_request,
+            edit_link_request=edit_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -403,7 +403,7 @@ class LinksApi:
     def edit_link_with_http_info(
         self,
         link_id: Annotated[StrictStr, Field(description="Link API ID")],
-        link_edit_request: Annotated[Optional[LinkEditRequest], Field(description="Info of the link to edit")] = None,
+        edit_link_request: Annotated[Optional[EditLinkRequest], Field(description="Info of the link to edit")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -422,8 +422,8 @@ class LinksApi:
 
         :param link_id: Link API ID (required)
         :type link_id: str
-        :param link_edit_request: Info of the link to edit
-        :type link_edit_request: LinkEditRequest
+        :param edit_link_request: Info of the link to edit
+        :type edit_link_request: EditLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -448,7 +448,7 @@ class LinksApi:
 
         _param = self._edit_link_serialize(
             link_id=link_id,
-            link_edit_request=link_edit_request,
+            edit_link_request=edit_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -476,7 +476,7 @@ class LinksApi:
     def edit_link_without_preload_content(
         self,
         link_id: Annotated[StrictStr, Field(description="Link API ID")],
-        link_edit_request: Annotated[Optional[LinkEditRequest], Field(description="Info of the link to edit")] = None,
+        edit_link_request: Annotated[Optional[EditLinkRequest], Field(description="Info of the link to edit")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -495,8 +495,8 @@ class LinksApi:
 
         :param link_id: Link API ID (required)
         :type link_id: str
-        :param link_edit_request: Info of the link to edit
-        :type link_edit_request: LinkEditRequest
+        :param edit_link_request: Info of the link to edit
+        :type edit_link_request: EditLinkRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -521,7 +521,7 @@ class LinksApi:
 
         _param = self._edit_link_serialize(
             link_id=link_id,
-            link_edit_request=link_edit_request,
+            edit_link_request=edit_link_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -544,7 +544,7 @@ class LinksApi:
     def _edit_link_serialize(
         self,
         link_id,
-        link_edit_request,
+        edit_link_request,
         _request_auth,
         _content_type,
         _headers,
@@ -572,8 +572,8 @@ class LinksApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if link_edit_request is not None:
-            _body_params = link_edit_request
+        if edit_link_request is not None:
+            _body_params = edit_link_request
 
 
         # set the HTTP header `Accept`

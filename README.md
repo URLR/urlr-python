@@ -1,11 +1,11 @@
-# urlr@2.10.3
+# urlr@2.11.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
 - API version: 1.10
-- Package version: 2.10.3
+- Package version: 2.11.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -107,6 +107,9 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+ - [BaseLinkRequest](docs/BaseLinkRequest.md)
+ - [BaseLinkRequestMetatag](docs/BaseLinkRequestMetatag.md)
+ - [BaseLinkRequestQrcode](docs/BaseLinkRequestQrcode.md)
  - [CreateAccessToken200Response](docs/CreateAccessToken200Response.md)
  - [CreateAccessToken401Response](docs/CreateAccessToken401Response.md)
  - [CreateAccessTokenRequest](docs/CreateAccessTokenRequest.md)
@@ -114,10 +117,12 @@ Class | Method | HTTP request | Description
  - [CreateDomain409Response](docs/CreateDomain409Response.md)
  - [CreateDomainRequest](docs/CreateDomainRequest.md)
  - [CreateLink429Response](docs/CreateLink429Response.md)
+ - [CreateLinkRequest](docs/CreateLinkRequest.md)
  - [CreateQrCodeRequest](docs/CreateQrCodeRequest.md)
  - [CreateQrCodeRequestOneOf](docs/CreateQrCodeRequestOneOf.md)
  - [CreateQrCodeRequestOneOf1](docs/CreateQrCodeRequestOneOf1.md)
  - [EditLink500Response](docs/EditLink500Response.md)
+ - [EditLinkRequest](docs/EditLinkRequest.md)
  - [GetFolders200Response](docs/GetFolders200Response.md)
  - [GetFolders200ResponseFoldersInner](docs/GetFolders200ResponseFoldersInner.md)
  - [GetLink200Response](docs/GetLink200Response.md)
@@ -134,11 +139,6 @@ Class | Method | HTTP request | Description
  - [GetStatisticsRequest](docs/GetStatisticsRequest.md)
  - [GetTeams200Response](docs/GetTeams200Response.md)
  - [GetTeams200ResponseTeamsInner](docs/GetTeams200ResponseTeamsInner.md)
- - [LinkBaseRequest](docs/LinkBaseRequest.md)
- - [LinkBaseRequestMetatag](docs/LinkBaseRequestMetatag.md)
- - [LinkBaseRequestQrcode](docs/LinkBaseRequestQrcode.md)
- - [LinkCreateRequest](docs/LinkCreateRequest.md)
- - [LinkEditRequest](docs/LinkEditRequest.md)
  - [RefreshAccessToken401Response](docs/RefreshAccessToken401Response.md)
  - [RefreshAccessTokenRequest](docs/RefreshAccessTokenRequest.md)
 

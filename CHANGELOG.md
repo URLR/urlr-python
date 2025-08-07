@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.11.0] - 2025-08-07
+
+### Changed
+- Fixed method names and updated documentation for clarity and consistency.
+
+### ⚠️ Breaking Change
+- **`linkCreateRequest` renamed to `createLinkRequest`**  
+  This change restores the intended naming convention and corrects an **unintended renaming introduced in version 2.10.0**.  
+  If you were using `linkCreateRequest`, please update your code to use `createLinkRequest`.
+
 ## [2.10.0] - 2025-07-23
 
 - Updated URLR API version to 1.10

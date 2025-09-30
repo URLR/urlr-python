@@ -1,4 +1,4 @@
-# GetLink200ResponseMetatag
+# LinkMetatag
 
 Custom metadata for social previews
 
@@ -13,19 +13,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from urlr.models.get_link200_response_metatag import GetLink200ResponseMetatag
+from urlr.models.link_metatag import LinkMetatag
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of GetLink200ResponseMetatag from a JSON string
-get_link200_response_metatag_instance = GetLink200ResponseMetatag.from_json(json)
+# create an instance of LinkMetatag from a JSON string
+link_metatag_instance = LinkMetatag.from_json(json)
 # print the JSON string representation of the object
-print(GetLink200ResponseMetatag.to_json())
+print(LinkMetatag.to_json())
 
 # convert the object into a dict
-get_link200_response_metatag_dict = get_link200_response_metatag_instance.to_dict()
-# create an instance of GetLink200ResponseMetatag from a dict
-get_link200_response_metatag_from_dict = GetLink200ResponseMetatag.from_dict(get_link200_response_metatag_dict)
+link_metatag_dict = link_metatag_instance.to_dict()
+# create an instance of LinkMetatag from a dict
+link_metatag_from_dict = LinkMetatag.from_dict(link_metatag_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

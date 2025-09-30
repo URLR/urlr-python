@@ -4,7 +4,7 @@
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 1.10
+- API version: 1.12
 - Package version: 2.11.1
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
@@ -107,10 +107,12 @@ Class | Method | HTTP request | Description
 *AccessTokensApi* | [**create_access_token**](docs/AccessTokensApi.md#create_access_token) | **POST** /access_tokens/create | Get an access token
 *AccessTokensApi* | [**refresh_access_token**](docs/AccessTokensApi.md#refresh_access_token) | **POST** /access_tokens/refresh | Refresh an access token
 *DomainsApi* | [**create_domain**](docs/DomainsApi.md#create_domain) | **POST** /domains/create | Create a domain
+*FoldersApi* | [**create_folder**](docs/FoldersApi.md#create_folder) | **POST** /folders/create | Create a folder
 *FoldersApi* | [**get_folders**](docs/FoldersApi.md#get_folders) | **GET** /folders/{team_id} | Get folders of workspace
 *LinksApi* | [**create_link**](docs/LinksApi.md#create_link) | **POST** /links/create | Create a link
 *LinksApi* | [**edit_link**](docs/LinksApi.md#edit_link) | **PATCH** /links/{link_id} | Edit a link
 *LinksApi* | [**get_link**](docs/LinksApi.md#get_link) | **GET** /links/{link_id} | Get a link
+*LinksApi* | [**list_links**](docs/LinksApi.md#list_links) | **GET** /links | List links
 *QRCodesApi* | [**create_qr_code**](docs/QRCodesApi.md#create_qr_code) | **POST** /qrcodes/create | Create a QR Code
 *StatisticsApi* | [**get_statistics**](docs/StatisticsApi.md#get_statistics) | **POST** /statistics | Get statistics of a link
 *WorkspacesApi* | [**get_teams**](docs/WorkspacesApi.md#get_teams) | **GET** /teams | Get workspaces of user
@@ -125,8 +127,10 @@ Class | Method | HTTP request | Description
  - [CreateAccessToken401Response](docs/CreateAccessToken401Response.md)
  - [CreateAccessTokenRequest](docs/CreateAccessTokenRequest.md)
  - [CreateDomain200Response](docs/CreateDomain200Response.md)
- - [CreateDomain409Response](docs/CreateDomain409Response.md)
  - [CreateDomainRequest](docs/CreateDomainRequest.md)
+ - [CreateFolder200Response](docs/CreateFolder200Response.md)
+ - [CreateFolder409Response](docs/CreateFolder409Response.md)
+ - [CreateFolderRequest](docs/CreateFolderRequest.md)
  - [CreateLink429Response](docs/CreateLink429Response.md)
  - [CreateLinkRequest](docs/CreateLinkRequest.md)
  - [CreateQrCodeRequest](docs/CreateQrCodeRequest.md)
@@ -136,13 +140,6 @@ Class | Method | HTTP request | Description
  - [EditLinkRequest](docs/EditLinkRequest.md)
  - [GetFolders200Response](docs/GetFolders200Response.md)
  - [GetFolders200ResponseFoldersInner](docs/GetFolders200ResponseFoldersInner.md)
- - [GetLink200Response](docs/GetLink200Response.md)
- - [GetLink200ResponseGeolinksInner](docs/GetLink200ResponseGeolinksInner.md)
- - [GetLink200ResponseGeolinksInnerConditionsInner](docs/GetLink200ResponseGeolinksInnerConditionsInner.md)
- - [GetLink200ResponseMetatag](docs/GetLink200ResponseMetatag.md)
- - [GetLink200ResponseQrcode](docs/GetLink200ResponseQrcode.md)
- - [GetLink200ResponseTagsInner](docs/GetLink200ResponseTagsInner.md)
- - [GetLink200ResponseUtm](docs/GetLink200ResponseUtm.md)
  - [GetLink401Response](docs/GetLink401Response.md)
  - [GetLink404Response](docs/GetLink404Response.md)
  - [GetLink422Response](docs/GetLink422Response.md)
@@ -150,6 +147,14 @@ Class | Method | HTTP request | Description
  - [GetStatisticsRequest](docs/GetStatisticsRequest.md)
  - [GetTeams200Response](docs/GetTeams200Response.md)
  - [GetTeams200ResponseTeamsInner](docs/GetTeams200ResponseTeamsInner.md)
+ - [Link](docs/Link.md)
+ - [LinkGeolinksInner](docs/LinkGeolinksInner.md)
+ - [LinkGeolinksInnerConditionsInner](docs/LinkGeolinksInnerConditionsInner.md)
+ - [LinkMetatag](docs/LinkMetatag.md)
+ - [LinkQrcode](docs/LinkQrcode.md)
+ - [LinkTagsInner](docs/LinkTagsInner.md)
+ - [LinkUtm](docs/LinkUtm.md)
+ - [ListLinks200Response](docs/ListLinks200Response.md)
  - [RefreshAccessToken401Response](docs/RefreshAccessToken401Response.md)
  - [RefreshAccessTokenRequest](docs/RefreshAccessTokenRequest.md)
 

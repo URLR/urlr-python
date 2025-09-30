@@ -1,4 +1,4 @@
-# GetLink200ResponseUtm
+# LinkUtm
 
 UTM parameters
 
@@ -14,19 +14,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from urlr.models.get_link200_response_utm import GetLink200ResponseUtm
+from urlr.models.link_utm import LinkUtm
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of GetLink200ResponseUtm from a JSON string
-get_link200_response_utm_instance = GetLink200ResponseUtm.from_json(json)
+# create an instance of LinkUtm from a JSON string
+link_utm_instance = LinkUtm.from_json(json)
 # print the JSON string representation of the object
-print(GetLink200ResponseUtm.to_json())
+print(LinkUtm.to_json())
 
 # convert the object into a dict
-get_link200_response_utm_dict = get_link200_response_utm_instance.to_dict()
-# create an instance of GetLink200ResponseUtm from a dict
-get_link200_response_utm_from_dict = GetLink200ResponseUtm.from_dict(get_link200_response_utm_dict)
+link_utm_dict = link_utm_instance.to_dict()
+# create an instance of LinkUtm from a dict
+link_utm_from_dict = LinkUtm.from_dict(link_utm_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

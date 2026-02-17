@@ -113,7 +113,7 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.FoldersApi(api_client)
-    team_id = 'ffefc6c4-d970-4373-a867-2a69c8be2c89' # str | Workspace API ID
+    team_id = UUID('ffefc6c4-d970-4373-a867-2a69c8be2c89') # UUID | Workspace API ID
 
     try:
         # Get folders of workspace
@@ -131,7 +131,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **team_id** | **str**| Workspace API ID | 
+ **team_id** | **UUID**| Workspace API ID | 
 
 ### Return type
 

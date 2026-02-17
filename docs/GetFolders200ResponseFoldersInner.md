@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Folder API ID | [optional] 
+**id** | **UUID** | Folder API ID | [optional] 
 **name** | **str** | Folder name | [optional] 
 
 ## Example

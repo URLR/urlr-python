@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**link_id** | **str** | Link API ID | 
+**link_id** | **UUID** | Link API ID | 
 **var_from** | **datetime** | Get statistics from this date | [optional] 
 **to** | **datetime** | Get statistics until this date | [optional] 
 

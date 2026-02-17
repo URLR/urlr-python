@@ -6,11 +6,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** | URL to shorten | 
-**folder_id** | **str** | Folder API ID | [optional] 
+**folder_id** | **UUID** | Folder API ID | [optional] 
 **domain** | **str** | Domain | [optional] 
 **code** | **str** | Custom short code | [optional] 
 **label** | **str** | Label | [optional] 
-**tags** | **List[str]** | Tags | [optional] 
+**tags** | **List[UUID]** | Tags | [optional] 
 **password** | **str** | Password | [optional] 
 **qrcode** | [**BaseLinkRequestQrcode**](BaseLinkRequestQrcode.md) |  | [optional] 
 **utm** | [**LinkUtm**](LinkUtm.md) |  | [optional] 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **expired_at** | **datetime** | Scheduled expiration date | [optional] 
 **expired_url** | **str** | Expiration URL | [optional] 
 **delete_after_expiration** | **bool** | Whether or not to remove the link after the expiry date | [optional] [default to False]
-**team_id** | **str** | Workspace API ID | 
+**team_id** | **UUID** | Workspace API ID | 
 
 ## Example
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**link_id** | **str** | Link API ID | [optional] 
+**link_id** | **UUID** | Link API ID | [optional] 
 **clicks** | **int** | Total number of visits, combining clicks and scans | [optional] 
 **unique_clicks** | **int** | Number of unique visitors, combining clicks and scans | [optional] 
 

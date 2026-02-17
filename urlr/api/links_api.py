@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     URLR API Reference
 
@@ -11,6 +9,7 @@
 
     Do not edit the class manually.
 """  # noqa: E501
+
 
 import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
@@ -350,7 +349,7 @@ class LinksApi:
 
 
         :param link_id: Link API ID (required)
-        :type link_id: str
+        :type link_id: UUID
         :param edit_link_request: Info of the link to edit
         :type edit_link_request: EditLinkRequest
         :param _request_timeout: timeout setting for this request. If one
@@ -423,7 +422,7 @@ class LinksApi:
 
 
         :param link_id: Link API ID (required)
-        :type link_id: str
+        :type link_id: UUID
         :param edit_link_request: Info of the link to edit
         :type edit_link_request: EditLinkRequest
         :param _request_timeout: timeout setting for this request. If one
@@ -496,7 +495,7 @@ class LinksApi:
 
 
         :param link_id: Link API ID (required)
-        :type link_id: str
+        :type link_id: UUID
         :param edit_link_request: Info of the link to edit
         :type edit_link_request: EditLinkRequest
         :param _request_timeout: timeout setting for this request. If one
@@ -645,7 +644,7 @@ class LinksApi:
 
 
         :param link_id: Link API ID (required)
-        :type link_id: str
+        :type link_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -714,7 +713,7 @@ class LinksApi:
 
 
         :param link_id: Link API ID (required)
-        :type link_id: str
+        :type link_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -783,7 +782,7 @@ class LinksApi:
 
 
         :param link_id: Link API ID (required)
-        :type link_id: str
+        :type link_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -917,11 +916,11 @@ class LinksApi:
 
 
         :param team_id: Filter by Workspace API ID
-        :type team_id: str
+        :type team_id: UUID
         :param folder_id: Filter by Folder API ID
-        :type folder_id: str
+        :type folder_id: UUID
         :param tag_id: Filter by Tag API ID
-        :type tag_id: str
+        :type tag_id: UUID
         :param limit: Number of items per page
         :type limit: int
         :param page: Page number
@@ -1002,11 +1001,11 @@ class LinksApi:
 
 
         :param team_id: Filter by Workspace API ID
-        :type team_id: str
+        :type team_id: UUID
         :param folder_id: Filter by Folder API ID
-        :type folder_id: str
+        :type folder_id: UUID
         :param tag_id: Filter by Tag API ID
-        :type tag_id: str
+        :type tag_id: UUID
         :param limit: Number of items per page
         :type limit: int
         :param page: Page number
@@ -1087,11 +1086,11 @@ class LinksApi:
 
 
         :param team_id: Filter by Workspace API ID
-        :type team_id: str
+        :type team_id: UUID
         :param folder_id: Filter by Folder API ID
-        :type folder_id: str
+        :type folder_id: UUID
         :param tag_id: Filter by Tag API ID
-        :type tag_id: str
+        :type tag_id: UUID
         :param limit: Number of items per page
         :type limit: int
         :param page: Page number

@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**team_id** | **str** | Team API ID | 
+**team_id** | **UUID** | Team API ID | 
 **name** | **str** | Name | 
-**parent_id** | **str** | Folder API ID (if any) | [optional] 
+**parent_id** | **UUID** | Folder API ID (if any) | [optional] 
 **color** | **str** | Color of folder | [optional] 
 
 ## Example

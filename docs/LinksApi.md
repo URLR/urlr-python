@@ -127,7 +127,7 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    link_id = 'ffefc6c4-d970-4373-a867-2a69c8be2c89' # str | Link API ID
+    link_id = UUID('ffefc6c4-d970-4373-a867-2a69c8be2c89') # UUID | Link API ID
     edit_link_request = urlr.EditLinkRequest() # EditLinkRequest | Info of the link to edit (optional)
 
     try:
@@ -146,7 +146,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **link_id** | **str**| Link API ID | 
+ **link_id** | **UUID**| Link API ID | 
  **edit_link_request** | [**EditLinkRequest**](EditLinkRequest.md)| Info of the link to edit | [optional] 
 
 ### Return type
@@ -208,7 +208,7 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    link_id = 'ffefc6c4-d970-4373-a867-2a69c8be2c89' # str | Link API ID
+    link_id = UUID('ffefc6c4-d970-4373-a867-2a69c8be2c89') # UUID | Link API ID
 
     try:
         # Get a link
@@ -226,7 +226,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **link_id** | **str**| Link API ID | 
+ **link_id** | **UUID**| Link API ID | 
 
 ### Return type
 
@@ -287,9 +287,9 @@ configuration = urlr.Configuration(
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    team_id = 'team_id_example' # str | Filter by Workspace API ID (optional)
-    folder_id = 'folder_id_example' # str | Filter by Folder API ID (optional)
-    tag_id = 'tag_id_example' # str | Filter by Tag API ID (optional)
+    team_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Workspace API ID (optional)
+    folder_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Folder API ID (optional)
+    tag_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Tag API ID (optional)
     limit = 10 # int | Number of items per page (optional) (default to 10)
     page = 1 # int | Page number (optional) (default to 1)
 
@@ -309,9 +309,9 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **team_id** | **str**| Filter by Workspace API ID | [optional] 
- **folder_id** | **str**| Filter by Folder API ID | [optional] 
- **tag_id** | **str**| Filter by Tag API ID | [optional] 
+ **team_id** | **UUID**| Filter by Workspace API ID | [optional] 
+ **folder_id** | **UUID**| Filter by Folder API ID | [optional] 
+ **tag_id** | **UUID**| Filter by Tag API ID | [optional] 
  **limit** | **int**| Number of items per page | [optional] [default to 10]
  **page** | **int**| Page number | [optional] [default to 1]
 

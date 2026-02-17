@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     URLR API Reference
 
@@ -11,6 +9,7 @@
 
     Do not edit the class manually.
 """  # noqa: E501
+
 
 import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
@@ -344,7 +343,7 @@ class FoldersApi:
 
 
         :param team_id: Workspace API ID (required)
-        :type team_id: str
+        :type team_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -413,7 +412,7 @@ class FoldersApi:
 
 
         :param team_id: Workspace API ID (required)
-        :type team_id: str
+        :type team_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -482,7 +481,7 @@ class FoldersApi:
 
 
         :param team_id: Workspace API ID (required)
-        :type team_id: str
+        :type team_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of

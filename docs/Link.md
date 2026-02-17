@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Link API ID | [optional] 
+**id** | **UUID** | Link API ID | [optional] 
 **url** | **str** | Original URL | [optional] 
-**team_id** | **str** | Workspace API ID | [optional] 
-**folder_id** | **str** | Folder API ID | [optional] 
+**team_id** | **UUID** | Workspace API ID | [optional] 
+**folder_id** | **UUID** | Folder API ID | [optional] 
 **domain** | **str** | Domain | [optional] 
 **code** | **str** | Short code | [optional] 
 **label** | **str** | Label | [optional] 

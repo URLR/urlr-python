@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**link_id** | **str** | Link API ID of the QR Code | 
+**link_id** | **UUID** | Link API ID of the QR Code | 
 
 ## Example
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Workspace API ID | [optional] 
+**id** | **UUID** | Workspace API ID | [optional] 
 **name** | **str** | Workspace name | [optional] 
 
 ## Example

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**team_id** | **str** | Team API ID | 
+**team_id** | **UUID** | Team API ID | 
 **domain** | **str** | Domain | 
 **root_url** | **str** | Redirect URL for the root of the domain | [optional] 
 

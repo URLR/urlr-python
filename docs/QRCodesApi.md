@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **create_qr_code**
-> bytearray create_qr_code(create_qr_code_request=create_qr_code_request)
+> bytes create_qr_code(create_qr_code_request=create_qr_code_request)
 
 Create a QR Code
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bytearray**
+**bytes**
 
 ### Authorization
 

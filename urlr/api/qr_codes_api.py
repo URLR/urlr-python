@@ -55,7 +55,7 @@ class QRCodesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> bytearray:
+    ) -> bytes:
         """Create a QR Code
 
 
@@ -92,7 +92,7 @@ class QRCodesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "bytearray",
+            '201': "bytes",
             '401': "GetLink401Response",
             '422': "GetLink422Response",
             '429': "CreateLink429Response",
@@ -125,7 +125,7 @@ class QRCodesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[bytearray]:
+    ) -> ApiResponse[bytes]:
         """Create a QR Code
 
 
@@ -162,7 +162,7 @@ class QRCodesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "bytearray",
+            '201': "bytes",
             '401': "GetLink401Response",
             '422': "GetLink422Response",
             '429': "CreateLink429Response",
@@ -232,7 +232,7 @@ class QRCodesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "bytearray",
+            '201': "bytes",
             '401': "GetLink401Response",
             '422': "GetLink422Response",
             '429': "CreateLink429Response",

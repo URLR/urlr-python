@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.14.0] - 2026-03-31
+- Updated to OpenAPI Generator 7.21.0
+
 ## [2.13.0] - 2026-02-17
 - Updated to OpenAPI Generator 7.20.0
 

@@ -1,48 +1,60 @@
 # urlr.FoldersApi
 
-All URIs are relative to *https://urlr.me/api/v1*
+All URIs are relative to *https://urlr.me/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_folder**](FoldersApi.md#create_folder) | **POST** /folders/create | Create a folder
-[**get_folders**](FoldersApi.md#get_folders) | **GET** /folders/{team_id} | Get folders of workspace
+[**folder_create**](FoldersApi.md#folder_create) | **POST** /folders | Create a folder
+[**folder_get**](FoldersApi.md#folder_get) | **GET** /folders/{folder_id} | Get a folder
+[**folder_list**](FoldersApi.md#folder_list) | **GET** /folders | List folders
 
 
-# **create_folder**
-> CreateFolder200Response create_folder(create_folder_request=create_folder_request)
+# **folder_create**
+> Folder folder_create(folder_create_request=folder_create_request)
 
 Create a folder
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import urlr
-from urlr.models.create_folder200_response import CreateFolder200Response
-from urlr.models.create_folder_request import CreateFolderRequest
+from urlr.models.folder import Folder
+from urlr.models.folder_create_request import FolderCreateRequest
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://urlr.me/api/v1
+# Defining the host is optional and defaults to https://urlr.me/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = urlr.Configuration(
-    host = "https://urlr.me/api/v1"
+    host = "https://urlr.me/api/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.FoldersApi(api_client)
-    create_folder_request = urlr.CreateFolderRequest() # CreateFolderRequest | You can use this endpoint to add a folder to URLR. (optional)
+    folder_create_request = urlr.FolderCreateRequest() # FolderCreateRequest | You can use this endpoint to add a folder to URLR. (optional)
 
     try:
         # Create a folder
-        api_response = api_instance.create_folder(create_folder_request=create_folder_request)
-        print("The response of FoldersApi->create_folder:\n")
+        api_response = api_instance.folder_create(folder_create_request=folder_create_request)
+        print("The response of FoldersApi->folder_create:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling FoldersApi->create_folder: %s\n" % e)
+        print("Exception when calling FoldersApi->folder_create: %s\n" % e)
 ```
 
 
@@ -52,15 +64,15 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_folder_request** | [**CreateFolderRequest**](CreateFolderRequest.md)| You can use this endpoint to add a folder to URLR. | [optional] 
+ **folder_create_request** | [**FolderCreateRequest**](FolderCreateRequest.md)| You can use this endpoint to add a folder to URLR. | [optional] 
 
 ### Return type
 
-[**CreateFolder200Response**](CreateFolder200Response.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -71,32 +83,34 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Folder |  -  |
+**201** | Folder |  -  |
 **401** | Unauthorized |  -  |
+**404** | Not Found |  -  |
 **429** | Limits Exceeded |  -  |
 **409** | Conflict |  -  |
+**422** | Validation Failed |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_folders**
-> GetFolders200Response get_folders(team_id)
+# **folder_get**
+> Folder folder_get(folder_id)
 
-Get folders of workspace
+Get a folder
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import urlr
-from urlr.models.get_folders200_response import GetFolders200Response
+from urlr.models.folder import Folder
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://urlr.me/api/v1
+# Defining the host is optional and defaults to https://urlr.me/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = urlr.Configuration(
-    host = "https://urlr.me/api/v1"
+    host = "https://urlr.me/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -104,24 +118,25 @@ configuration = urlr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = urlr.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.FoldersApi(api_client)
-    team_id = UUID('ffefc6c4-d970-4373-a867-2a69c8be2c89') # UUID | Workspace API ID
+    folder_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Folder API ID
 
     try:
-        # Get folders of workspace
-        api_response = api_instance.get_folders(team_id)
-        print("The response of FoldersApi->get_folders:\n")
+        # Get a folder
+        api_response = api_instance.folder_get(folder_id)
+        print("The response of FoldersApi->folder_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling FoldersApi->get_folders: %s\n" % e)
+        print("Exception when calling FoldersApi->folder_get: %s\n" % e)
 ```
 
 
@@ -131,15 +146,95 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **team_id** | **UUID**| Workspace API ID | 
+ **folder_id** | **UUID**| Folder API ID | 
 
 ### Return type
 
-[**GetFolders200Response**](GetFolders200Response.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/problem+json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Folder |  -  |
+**404** | Not Found |  -  |
+**401** | Unauthorized |  -  |
+**422** | Validation Failed |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **folder_list**
+> FolderList200Response folder_list(workspace_id)
+
+List folders
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import urlr
+from urlr.models.folder_list200_response import FolderList200Response
+from urlr.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://urlr.me/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = urlr.Configuration(
+    host = "https://urlr.me/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with urlr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = urlr.FoldersApi(api_client)
+    workspace_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Workspace API ID
+
+    try:
+        # List folders
+        api_response = api_instance.folder_list(workspace_id)
+        print("The response of FoldersApi->folder_list:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling FoldersApi->folder_list: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspace_id** | **UUID**| Workspace API ID | 
+
+### Return type
+
+[**FolderList200Response**](FolderList200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

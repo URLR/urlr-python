@@ -1,35 +1,36 @@
 # urlr.LinksApi
 
-All URIs are relative to *https://urlr.me/api/v1*
+All URIs are relative to *https://urlr.me/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_link**](LinksApi.md#create_link) | **POST** /links/create | Create a link
-[**edit_link**](LinksApi.md#edit_link) | **PATCH** /links/{link_id} | Edit a link
-[**get_link**](LinksApi.md#get_link) | **GET** /links/{link_id} | Get a link
-[**list_links**](LinksApi.md#list_links) | **GET** /links | List links
+[**link_create**](LinksApi.md#link_create) | **POST** /links | Create a link
+[**link_delete**](LinksApi.md#link_delete) | **DELETE** /links/{link_id} | Delete a link
+[**link_edit**](LinksApi.md#link_edit) | **PATCH** /links/{link_id} | Edit a link
+[**link_get**](LinksApi.md#link_get) | **GET** /links/{link_id} | Get a link
+[**link_list**](LinksApi.md#link_list) | **GET** /links | List links
 
 
-# **create_link**
-> Link create_link(create_link_request=create_link_request)
+# **link_create**
+> Link link_create(link_create_request=link_create_request)
 
 Create a link
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import urlr
-from urlr.models.create_link_request import CreateLinkRequest
 from urlr.models.link import Link
+from urlr.models.link_create_request import LinkCreateRequest
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://urlr.me/api/v1
+# Defining the host is optional and defaults to https://urlr.me/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = urlr.Configuration(
-    host = "https://urlr.me/api/v1"
+    host = "https://urlr.me/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -37,24 +38,25 @@ configuration = urlr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = urlr.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    create_link_request = urlr.CreateLinkRequest() # CreateLinkRequest | Info of the link to create (optional)
+    link_create_request = urlr.LinkCreateRequest() # LinkCreateRequest | Info of the link to create (optional)
 
     try:
         # Create a link
-        api_response = api_instance.create_link(create_link_request=create_link_request)
-        print("The response of LinksApi->create_link:\n")
+        api_response = api_instance.link_create(link_create_request=link_create_request)
+        print("The response of LinksApi->link_create:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling LinksApi->create_link: %s\n" % e)
+        print("Exception when calling LinksApi->link_create: %s\n" % e)
 ```
 
 
@@ -64,7 +66,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_link_request** | [**CreateLinkRequest**](CreateLinkRequest.md)| Info of the link to create | [optional] 
+ **link_create_request** | [**LinkCreateRequest**](LinkCreateRequest.md)| Info of the link to create | [optional] 
 
 ### Return type
 
@@ -72,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -91,26 +93,25 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **edit_link**
-> Link edit_link(link_id, edit_link_request=edit_link_request)
+# **link_delete**
+> Link link_delete(link_id)
 
-Edit a link
+Delete a link
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import urlr
-from urlr.models.edit_link_request import EditLinkRequest
 from urlr.models.link import Link
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://urlr.me/api/v1
+# Defining the host is optional and defaults to https://urlr.me/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = urlr.Configuration(
-    host = "https://urlr.me/api/v1"
+    host = "https://urlr.me/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -118,25 +119,25 @@ configuration = urlr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = urlr.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    link_id = UUID('ffefc6c4-d970-4373-a867-2a69c8be2c89') # UUID | Link API ID
-    edit_link_request = urlr.EditLinkRequest() # EditLinkRequest | Info of the link to edit (optional)
+    link_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Link API ID
 
     try:
-        # Edit a link
-        api_response = api_instance.edit_link(link_id, edit_link_request=edit_link_request)
-        print("The response of LinksApi->edit_link:\n")
+        # Delete a link
+        api_response = api_instance.link_delete(link_id)
+        print("The response of LinksApi->link_delete:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling LinksApi->edit_link: %s\n" % e)
+        print("Exception when calling LinksApi->link_delete: %s\n" % e)
 ```
 
 
@@ -147,7 +148,6 @@ with urlr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **link_id** | **UUID**| Link API ID | 
- **edit_link_request** | [**EditLinkRequest**](EditLinkRequest.md)| Info of the link to edit | [optional] 
 
 ### Return type
 
@@ -155,7 +155,91 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/problem+json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Link |  -  |
+**404** | Not Found |  -  |
+**401** | Unauthorized |  -  |
+**422** | Validation Failed |  -  |
+**500** | Internal Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **link_edit**
+> Link link_edit(link_id, link_edit_request=link_edit_request)
+
+Edit a link
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import urlr
+from urlr.models.link import Link
+from urlr.models.link_edit_request import LinkEditRequest
+from urlr.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://urlr.me/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = urlr.Configuration(
+    host = "https://urlr.me/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with urlr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = urlr.LinksApi(api_client)
+    link_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Link API ID
+    link_edit_request = urlr.LinkEditRequest() # LinkEditRequest | Info of the link to edit (optional)
+
+    try:
+        # Edit a link
+        api_response = api_instance.link_edit(link_id, link_edit_request=link_edit_request)
+        print("The response of LinksApi->link_edit:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LinksApi->link_edit: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **link_id** | **UUID**| Link API ID | 
+ **link_edit_request** | [**LinkEditRequest**](LinkEditRequest.md)| Info of the link to edit | [optional] 
+
+### Return type
+
+[**Link**](Link.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -167,20 +251,21 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Link |  -  |
+**404** | Not Found |  -  |
 **401** | Unauthorized |  -  |
 **422** | Validation Failed |  -  |
 **500** | Internal Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_link**
-> Link get_link(link_id)
+# **link_get**
+> Link link_get(link_id)
 
 Get a link
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import urlr
@@ -188,10 +273,10 @@ from urlr.models.link import Link
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://urlr.me/api/v1
+# Defining the host is optional and defaults to https://urlr.me/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = urlr.Configuration(
-    host = "https://urlr.me/api/v1"
+    host = "https://urlr.me/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -199,24 +284,25 @@ configuration = urlr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = urlr.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    link_id = UUID('ffefc6c4-d970-4373-a867-2a69c8be2c89') # UUID | Link API ID
+    link_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Link API ID
 
     try:
         # Get a link
-        api_response = api_instance.get_link(link_id)
-        print("The response of LinksApi->get_link:\n")
+        api_response = api_instance.link_get(link_id)
+        print("The response of LinksApi->link_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling LinksApi->get_link: %s\n" % e)
+        print("Exception when calling LinksApi->link_get: %s\n" % e)
 ```
 
 
@@ -234,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -252,25 +338,25 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_links**
-> ListLinks200Response list_links(team_id=team_id, folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
+# **link_list**
+> LinkList200Response link_list(workspace_id=workspace_id, folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
 
 List links
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import urlr
-from urlr.models.list_links200_response import ListLinks200Response
+from urlr.models.link_list200_response import LinkList200Response
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://urlr.me/api/v1
+# Defining the host is optional and defaults to https://urlr.me/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = urlr.Configuration(
-    host = "https://urlr.me/api/v1"
+    host = "https://urlr.me/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -278,16 +364,17 @@ configuration = urlr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = urlr.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    team_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Workspace API ID (optional)
+    workspace_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Workspace API ID (optional)
     folder_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Folder API ID (optional)
     tag_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Tag API ID (optional)
     limit = 10 # int | Number of items per page (optional) (default to 10)
@@ -295,11 +382,11 @@ with urlr.ApiClient(configuration) as api_client:
 
     try:
         # List links
-        api_response = api_instance.list_links(team_id=team_id, folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
-        print("The response of LinksApi->list_links:\n")
+        api_response = api_instance.link_list(workspace_id=workspace_id, folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
+        print("The response of LinksApi->link_list:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling LinksApi->list_links: %s\n" % e)
+        print("Exception when calling LinksApi->link_list: %s\n" % e)
 ```
 
 
@@ -309,7 +396,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **team_id** | **UUID**| Filter by Workspace API ID | [optional] 
+ **workspace_id** | **UUID**| Filter by Workspace API ID | [optional] 
  **folder_id** | **UUID**| Filter by Folder API ID | [optional] 
  **tag_id** | **UUID**| Filter by Tag API ID | [optional] 
  **limit** | **int**| Number of items per page | [optional] [default to 10]
@@ -317,11 +404,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListLinks200Response**](ListLinks200Response.md)
+[**LinkList200Response**](LinkList200Response.md)
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

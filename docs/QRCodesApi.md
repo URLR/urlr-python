@@ -1,31 +1,31 @@
 # urlr.QRCodesApi
 
-All URIs are relative to *https://urlr.me/api/v1*
+All URIs are relative to *https://urlr.me/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_qr_code**](QRCodesApi.md#create_qr_code) | **POST** /qrcodes/create | Create a QR Code
+[**qrcode_create**](QRCodesApi.md#qrcode_create) | **POST** /qrcodes | Create a QR Code
 
 
-# **create_qr_code**
-> bytes create_qr_code(create_qr_code_request=create_qr_code_request)
+# **qrcode_create**
+> bytes qrcode_create(qrcode_create_request=qrcode_create_request)
 
 Create a QR Code
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import urlr
-from urlr.models.create_qr_code_request import CreateQrCodeRequest
+from urlr.models.qrcode_create_request import QrcodeCreateRequest
 from urlr.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://urlr.me/api/v1
+# Defining the host is optional and defaults to https://urlr.me/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = urlr.Configuration(
-    host = "https://urlr.me/api/v1"
+    host = "https://urlr.me/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -33,24 +33,25 @@ configuration = urlr.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = urlr.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.QRCodesApi(api_client)
-    create_qr_code_request = urlr.CreateQrCodeRequest() # CreateQrCodeRequest | Info of the QR Code to create (optional)
+    qrcode_create_request = urlr.QrcodeCreateRequest() # QrcodeCreateRequest | Info of the QR Code to create (optional)
 
     try:
         # Create a QR Code
-        api_response = api_instance.create_qr_code(create_qr_code_request=create_qr_code_request)
-        print("The response of QRCodesApi->create_qr_code:\n")
+        api_response = api_instance.qrcode_create(qrcode_create_request=qrcode_create_request)
+        print("The response of QRCodesApi->qrcode_create:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling QRCodesApi->create_qr_code: %s\n" % e)
+        print("Exception when calling QRCodesApi->qrcode_create: %s\n" % e)
 ```
 
 
@@ -60,7 +61,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_qr_code_request** | [**CreateQrCodeRequest**](CreateQrCodeRequest.md)| Info of the QR Code to create | [optional] 
+ **qrcode_create_request** | [**QrcodeCreateRequest**](QrcodeCreateRequest.md)| Info of the QR Code to create | [optional] 
 
 ### Return type
 
@@ -68,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -81,6 +82,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | QR Code |  -  |
 **401** | Unauthorized |  -  |
+**404** | Not Found |  -  |
 **422** | Validation Failed |  -  |
 **429** | Limits Exceeded |  -  |
 **500** | Internal Error |  -  |

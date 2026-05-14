@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0.2] - 2026-05-14
+
+- Fix example of getting started readme section
+
 ## [3.0.1] - 2026-05-14
 
 - Fix examples and add changelog entry for 3.0.0

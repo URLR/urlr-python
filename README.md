@@ -1,11 +1,11 @@
-# urlr@3.0.1
+# urlr@3.0.2
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
 - API version: 2.0.0
-- Package version: 3.0.1
+- Package version: 3.0.2
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -52,48 +52,25 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 import os
 import urlr
-from urlr.rest import ApiException
 
-username = os.getenv("URLR_API_USERNAME")  # to be defined on your side
-password = os.getenv("URLR_API_PASSWORD")  # to be defined on your side
-
-
-# Access Tokens
+api_key = os.getenv("URLR_API_KEY")  # to be defined on your side
 
 configuration = urlr.Configuration()
-
-with urlr.ApiClient(configuration) as api_client:
-    access_token_api = urlr.AccessTokensApi(api_client)
-
-    create_access_token_request = urlr.CreateAccessTokenRequest(
-        username=username,
-        password=password,
-    )
-
-    try:
-        api_response = access_token_api.create_access_token(
-            create_access_token_request=create_access_token_request)
-    except ApiException as e:
-        print("Exception when calling AccessTokensApi->create_access_token: %s\n" % e)
-        quit()
-
-configuration.access_token = api_response.token
+configuration.api_key['ApiKeyAuth'] = api_key
 
 # Create a link
 
 with urlr.ApiClient(configuration) as api_client:
     links_api = urlr.LinksApi(api_client)
-    create_link_request = urlr.CreateLinkRequest(
+    link_create_request = urlr.LinkCreateRequest(
         url="",
-        team_id=""
+        workspace_id=""
     )
 
     try:
-        link = links_api.create_link(
-            create_link_request=create_link_request)
+        link = links_api.link_create(link_create_request=link_create_request)
     except Exception as e:
-        print("Exception when calling LinksApi->create_link: %s\n" % e)
-
+        print("Exception when calling LinksApi->link_create: %s\n" % e)
 ```
 
 Complete examples can be found in the [docs](https://github.com/URLR/urlr-python/tree/main/docs) directory of the client repository.

@@ -1,11 +1,11 @@
-# urlr@3.0.0
+# urlr@3.0.1
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
 - API version: 2.0.0
-- Package version: 3.0.0
+- Package version: 3.0.1
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -96,7 +96,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 ```
 
-A complete example is [available here](examples/example1.py).
+Complete examples can be found in the [docs](https://github.com/URLR/urlr-python/tree/main/docs) directory of the client repository.
 
 ## API Endpoints
 

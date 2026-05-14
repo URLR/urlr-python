@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.1] - 2026-05-14
+
+- Fix examples and add changelog entry for 3.0.0
+
+## [3.0.0] - 2026-05-12
+
+This is a major version update that includes breaking changes.
+
+- Updated URLR API version to 2.0.0
+- Updated to OpenAPI Generator 7.22.0
+
 ## [2.14.0] - 2026-03-31
 - Updated to OpenAPI Generator 7.21.0
 

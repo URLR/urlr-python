@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **str** | URL to shorten | 
+**url** | **str** | URL to shorten | [optional] 
 **folder_id** | **UUID** | Folder API ID | [optional] 
 **domain** | **str** | Domain | [optional] 
 **code** | **str** | Custom short code | [optional] 
@@ -22,7 +22,6 @@ Name | Type | Description | Notes
 **utm** | [**LinkUtm**](LinkUtm.md) |  | [optional] 
 **metatag** | [**LinkBaseRequestMetatag**](LinkBaseRequestMetatag.md) |  | [optional] 
 **geolinks** | [**List[LinkGeolinksInner]**](LinkGeolinksInner.md) | Dynamic routing conditions | [optional] 
-**workspace_id** | **UUID** | Workspace API ID | 
 
 ## Example
 

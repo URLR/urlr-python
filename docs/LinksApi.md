@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **link_delete**
-> Link link_delete(link_id)
+> link_delete(link_id)
 
 Delete a link
 
@@ -104,7 +104,6 @@ Delete a link
 
 ```python
 import urlr
-from urlr.models.link import Link
 from urlr.rest import ApiException
 from pprint import pprint
 
@@ -133,9 +132,7 @@ with urlr.ApiClient(configuration) as api_client:
 
     try:
         # Delete a link
-        api_response = api_instance.link_delete(link_id)
-        print("The response of LinksApi->link_delete:\n")
-        pprint(api_response)
+        api_instance.link_delete(link_id)
     except Exception as e:
         print("Exception when calling LinksApi->link_delete: %s\n" % e)
 ```
@@ -151,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Link**](Link.md)
+void (empty response body)
 
 ### Authorization
 
@@ -160,13 +157,13 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/problem+json
+ - **Accept**: application/problem+json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | Link |  -  |
+**204** | Link deleted |  -  |
 **404** | Not Found |  -  |
 **401** | Unauthorized |  -  |
 **422** | Validation Failed |  -  |
@@ -339,7 +336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **link_list**
-> LinkList200Response link_list(workspace_id=workspace_id, folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
+> LinkList200Response link_list(folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
 
 List links
 
@@ -374,7 +371,6 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.LinksApi(api_client)
-    workspace_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Workspace API ID (optional)
     folder_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Folder API ID (optional)
     tag_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Filter by Tag API ID (optional)
     limit = 10 # int | Number of items per page (optional) (default to 10)
@@ -382,7 +378,7 @@ with urlr.ApiClient(configuration) as api_client:
 
     try:
         # List links
-        api_response = api_instance.link_list(workspace_id=workspace_id, folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
+        api_response = api_instance.link_list(folder_id=folder_id, tag_id=tag_id, limit=limit, page=page)
         print("The response of LinksApi->link_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -396,7 +392,6 @@ with urlr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **UUID**| Filter by Workspace API ID | [optional] 
  **folder_id** | **UUID**| Filter by Folder API ID | [optional] 
  **tag_id** | **UUID**| Filter by Tag API ID | [optional] 
  **limit** | **int**| Number of items per page | [optional] [default to 10]

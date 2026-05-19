@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "3.0.2"
+__version__ = "3.1.0"
 
 # Define package exports
 __all__ = [
@@ -24,7 +24,6 @@ __all__ = [
     "LinksApi",
     "QRCodesApi",
     "StatisticsApi",
-    "WorkspacesApi",
     "ApiResponse",
     "ApiClient",
     "Configuration",
@@ -63,8 +62,6 @@ __all__ = [
     "QrcodeCreateRequestOneOf",
     "QrcodeCreateRequestOneOf1",
     "StatisticGet200Response",
-    "Workspace",
-    "WorkspaceList200Response",
 ]
 
 # import apis into sdk package
@@ -73,7 +70,6 @@ from urlr.api.folders_api import FoldersApi as FoldersApi
 from urlr.api.links_api import LinksApi as LinksApi
 from urlr.api.qr_codes_api import QRCodesApi as QRCodesApi
 from urlr.api.statistics_api import StatisticsApi as StatisticsApi
-from urlr.api.workspaces_api import WorkspacesApi as WorkspacesApi
 
 # import ApiClient
 from urlr.api_response import ApiResponse as ApiResponse
@@ -116,6 +112,4 @@ from urlr.models.qrcode_create_request import QrcodeCreateRequest as QrcodeCreat
 from urlr.models.qrcode_create_request_one_of import QrcodeCreateRequestOneOf as QrcodeCreateRequestOneOf
 from urlr.models.qrcode_create_request_one_of1 import QrcodeCreateRequestOneOf1 as QrcodeCreateRequestOneOf1
 from urlr.models.statistic_get200_response import StatisticGet200Response as StatisticGet200Response
-from urlr.models.workspace import Workspace as Workspace
-from urlr.models.workspace_list200_response import WorkspaceList200Response as WorkspaceList200Response
 

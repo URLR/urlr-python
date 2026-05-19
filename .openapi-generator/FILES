@@ -36,9 +36,6 @@ docs/QrcodeCreateRequestOneOf.md
 docs/QrcodeCreateRequestOneOf1.md
 docs/StatisticGet200Response.md
 docs/StatisticsApi.md
-docs/Workspace.md
-docs/WorkspaceList200Response.md
-docs/WorkspacesApi.md
 pyproject.toml
 requirements.txt
 setup.cfg
@@ -79,9 +76,6 @@ test/test_qrcode_create_request_one_of.py
 test/test_qrcode_create_request_one_of1.py
 test/test_statistic_get200_response.py
 test/test_statistics_api.py
-test/test_workspace.py
-test/test_workspace_list200_response.py
-test/test_workspaces_api.py
 tox.ini
 urlr/__init__.py
 urlr/api/__init__.py
@@ -90,7 +84,6 @@ urlr/api/folders_api.py
 urlr/api/links_api.py
 urlr/api/qr_codes_api.py
 urlr/api/statistics_api.py
-urlr/api/workspaces_api.py
 urlr/api_client.py
 urlr/api_response.py
 urlr/configuration.py
@@ -125,7 +118,5 @@ urlr/models/qrcode_create_request.py
 urlr/models/qrcode_create_request_one_of.py
 urlr/models/qrcode_create_request_one_of1.py
 urlr/models/statistic_get200_response.py
-urlr/models/workspace.py
-urlr/models/workspace_list200_response.py
 urlr/py.typed
 urlr/rest.py

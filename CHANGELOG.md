@@ -1,5 +1,8 @@
 # Changelog
 
+## [3.1.0] - 2026-05-19
+
+- Adapt to workspace_id field removal. Not a breaking change because API V2 is still not officially used.
 ## [3.0.2] - 2026-05-14
 
 - Fix example of getting started readme section

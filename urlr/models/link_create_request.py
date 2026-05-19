@@ -35,7 +35,7 @@ class LinkCreateRequest(BaseModel):
     """
     LinkCreateRequest
     """ # noqa: E501
-    url: Annotated[str, Field(strict=True, max_length=4096)] = Field(description="URL to shorten")
+    url: Optional[Annotated[str, Field(strict=True, max_length=4096)]] = Field(default=None, description="URL to shorten")
     folder_id: Optional[UUID] = Field(default=None, description="Folder API ID")
     domain: Optional[StrictStr] = Field(default=None, description="Domain")
     code: Optional[Annotated[str, Field(min_length=2, strict=True, max_length=50)]] = Field(default=None, description="Custom short code")
@@ -52,8 +52,7 @@ class LinkCreateRequest(BaseModel):
     utm: Optional[LinkUtm] = None
     metatag: Optional[LinkBaseRequestMetatag] = None
     geolinks: Optional[List[LinkGeolinksInner]] = Field(default=None, description="Dynamic routing conditions")
-    workspace_id: UUID = Field(description="Workspace API ID")
-    __properties: ClassVar[List[str]] = ["url", "folder_id", "domain", "code", "label", "password", "delete_at", "expired_at", "expired_url", "expired_title", "expired_text", "delete_after_expiration", "tags", "qrcode", "utm", "metatag", "geolinks", "workspace_id"]
+    __properties: ClassVar[List[str]] = ["url", "folder_id", "domain", "code", "label", "password", "delete_at", "expired_at", "expired_url", "expired_title", "expired_text", "delete_after_expiration", "tags", "qrcode", "utm", "metatag", "geolinks"]
 
     @field_validator('code')
     def code_validate_regular_expression(cls, value):
@@ -151,8 +150,7 @@ class LinkCreateRequest(BaseModel):
             "qrcode": LinkBaseRequestQrcode.from_dict(obj["qrcode"]) if obj.get("qrcode") is not None else None,
             "utm": LinkUtm.from_dict(obj["utm"]) if obj.get("utm") is not None else None,
             "metatag": LinkBaseRequestMetatag.from_dict(obj["metatag"]) if obj.get("metatag") is not None else None,
-            "geolinks": [LinkGeolinksInner.from_dict(_item) for _item in obj["geolinks"]] if obj.get("geolinks") is not None else None,
-            "workspace_id": obj.get("workspace_id")
+            "geolinks": [LinkGeolinksInner.from_dict(_item) for _item in obj["geolinks"]] if obj.get("geolinks") is not None else None
         })
         return _obj
 

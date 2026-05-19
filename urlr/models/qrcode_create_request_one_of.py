@@ -20,7 +20,6 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List
-from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
@@ -30,8 +29,7 @@ class QrcodeCreateRequestOneOf(BaseModel):
     QrcodeCreateRequestOneOf
     """ # noqa: E501
     url: StrictStr = Field(description="URL of the QR Code")
-    workspace_id: UUID = Field(description="Workspace API ID")
-    __properties: ClassVar[List[str]] = ["url", "workspace_id"]
+    __properties: ClassVar[List[str]] = ["url"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -84,8 +82,7 @@ class QrcodeCreateRequestOneOf(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "url": obj.get("url"),
-            "workspace_id": obj.get("workspace_id")
+            "url": obj.get("url")
         })
         return _obj
 

@@ -42,13 +42,11 @@ class TestQrcodeCreateRequest(unittest.TestCase):
                 background_color = '#ffffff',
                 foreground_color = '#000000',
                 url = '',
-                workspace_id = '',
                 link_id = ''
             )
         else:
             return QrcodeCreateRequest(
                 url = '',
-                workspace_id = '',
                 link_id = '',
         )
         """

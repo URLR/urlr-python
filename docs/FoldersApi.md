@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **folder_list**
-> FolderList200Response folder_list(workspace_id)
+> FolderList200Response folder_list()
 
 List folders
 
@@ -208,11 +208,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with urlr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = urlr.FoldersApi(api_client)
-    workspace_id = UUID('38400000-8cf0-11bd-b23e-10b96e4ef00d') # UUID | Workspace API ID
 
     try:
         # List folders
-        api_response = api_instance.folder_list(workspace_id)
+        api_response = api_instance.folder_list()
         print("The response of FoldersApi->folder_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -223,10 +222,7 @@ with urlr.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **workspace_id** | **UUID**| Workspace API ID | 
+This endpoint does not need any parameter.
 
 ### Return type
 

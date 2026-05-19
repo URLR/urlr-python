@@ -5,7 +5,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**workspace_id** | **UUID** | Workspace API ID | 
 **name** | **str** | Name | 
 **parent_id** | **UUID** | Folder API ID | [optional] 
 **color** | **str** | Color of folder | [optional] 

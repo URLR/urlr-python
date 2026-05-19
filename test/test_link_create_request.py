@@ -75,13 +75,10 @@ class TestLinkCreateRequest(unittest.TestCase):
                                 operator = 'AND', )
                             ], 
                         url = '', )
-                    ],
-                workspace_id = ''
+                    ]
             )
         else:
             return LinkCreateRequest(
-                url = '',
-                workspace_id = '',
         )
         """
 

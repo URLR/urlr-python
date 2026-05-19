@@ -1,11 +1,11 @@
-# urlr@3.0.2
+# urlr@3.1.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
 - API version: 2.0.0
-- Package version: 3.0.2
+- Package version: 3.1.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -64,7 +64,6 @@ with urlr.ApiClient(configuration) as api_client:
     links_api = urlr.LinksApi(api_client)
     link_create_request = urlr.LinkCreateRequest(
         url="",
-        workspace_id=""
     )
 
     try:
@@ -94,8 +93,6 @@ Class | Method | HTTP request | Description
 *LinksApi* | [**link_list**](docs/LinksApi.md#link_list) | **GET** /links | List links
 *QRCodesApi* | [**qrcode_create**](docs/QRCodesApi.md#qrcode_create) | **POST** /qrcodes | Create a QR Code
 *StatisticsApi* | [**statistic_get**](docs/StatisticsApi.md#statistic_get) | **GET** /statistics | Get statistics
-*WorkspacesApi* | [**workspace_get**](docs/WorkspacesApi.md#workspace_get) | **GET** /workspaces/{workspace_id} | Get a workspace
-*WorkspacesApi* | [**workspace_list**](docs/WorkspacesApi.md#workspace_list) | **GET** /workspaces | List workspaces of user
 
 
 ## Models
@@ -129,8 +126,6 @@ Class | Method | HTTP request | Description
  - [QrcodeCreateRequestOneOf](docs/QrcodeCreateRequestOneOf.md)
  - [QrcodeCreateRequestOneOf1](docs/QrcodeCreateRequestOneOf1.md)
  - [StatisticGet200Response](docs/StatisticGet200Response.md)
- - [Workspace](docs/Workspace.md)
- - [WorkspaceList200Response](docs/WorkspaceList200Response.md)
 
 
 <a id="documentation-for-authorization"></a>

@@ -43,6 +43,4 @@ from urlr.models.qrcode_create_request import QrcodeCreateRequest
 from urlr.models.qrcode_create_request_one_of import QrcodeCreateRequestOneOf
 from urlr.models.qrcode_create_request_one_of1 import QrcodeCreateRequestOneOf1
 from urlr.models.statistic_get200_response import StatisticGet200Response
-from urlr.models.workspace import Workspace
-from urlr.models.workspace_list200_response import WorkspaceList200Response
 

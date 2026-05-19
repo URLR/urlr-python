@@ -6,7 +6,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** | URL of the QR Code | 
-**workspace_id** | **UUID** | Workspace API ID | 
 
 ## Example
 

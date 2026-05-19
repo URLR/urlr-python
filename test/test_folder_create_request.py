@@ -36,14 +36,12 @@ class TestFolderCreateRequest(unittest.TestCase):
         model = FolderCreateRequest()
         if include_optional:
             return FolderCreateRequest(
-                workspace_id = '',
                 name = '',
                 parent_id = '',
                 color = 'blue'
             )
         else:
             return FolderCreateRequest(
-                workspace_id = '',
                 name = '',
         )
         """

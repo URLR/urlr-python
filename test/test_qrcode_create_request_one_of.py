@@ -36,13 +36,11 @@ class TestQrcodeCreateRequestOneOf(unittest.TestCase):
         model = QrcodeCreateRequestOneOf()
         if include_optional:
             return QrcodeCreateRequestOneOf(
-                url = '',
-                workspace_id = ''
+                url = ''
             )
         else:
             return QrcodeCreateRequestOneOf(
                 url = '',
-                workspace_id = '',
         )
         """
 

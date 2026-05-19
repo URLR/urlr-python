@@ -600,7 +600,6 @@ class FoldersApi:
     @validate_call
     def folder_list(
         self,
-        workspace_id: Annotated[UUID, Field(description="Workspace API ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -617,8 +616,6 @@ class FoldersApi:
         """List folders
 
 
-        :param workspace_id: Workspace API ID (required)
-        :type workspace_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -642,7 +639,6 @@ class FoldersApi:
         """ # noqa: E501
 
         _param = self._folder_list_serialize(
-            workspace_id=workspace_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -669,7 +665,6 @@ class FoldersApi:
     @validate_call
     def folder_list_with_http_info(
         self,
-        workspace_id: Annotated[UUID, Field(description="Workspace API ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -686,8 +681,6 @@ class FoldersApi:
         """List folders
 
 
-        :param workspace_id: Workspace API ID (required)
-        :type workspace_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -711,7 +704,6 @@ class FoldersApi:
         """ # noqa: E501
 
         _param = self._folder_list_serialize(
-            workspace_id=workspace_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -738,7 +730,6 @@ class FoldersApi:
     @validate_call
     def folder_list_without_preload_content(
         self,
-        workspace_id: Annotated[UUID, Field(description="Workspace API ID")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -755,8 +746,6 @@ class FoldersApi:
         """List folders
 
 
-        :param workspace_id: Workspace API ID (required)
-        :type workspace_id: UUID
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -780,7 +769,6 @@ class FoldersApi:
         """ # noqa: E501
 
         _param = self._folder_list_serialize(
-            workspace_id=workspace_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -802,7 +790,6 @@ class FoldersApi:
 
     def _folder_list_serialize(
         self,
-        workspace_id,
         _request_auth,
         _content_type,
         _headers,
@@ -825,10 +812,6 @@ class FoldersApi:
 
         # process the path parameters
         # process the query parameters
-        if workspace_id is not None:
-            
-            _query_params.append(('workspace_id', workspace_id))
-            
         # process the header parameters
         # process the form parameters
         # process the body parameter

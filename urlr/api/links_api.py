@@ -343,7 +343,7 @@ class LinksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Link:
+    ) -> None:
         """Delete a link
 
 
@@ -380,7 +380,7 @@ class LinksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "Link",
+            '204': None,
             '404': "DomainGet404Response",
             '401': "DomainGet401Response",
             '422': "DomainGet422Response",
@@ -413,7 +413,7 @@ class LinksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Link]:
+    ) -> ApiResponse[None]:
         """Delete a link
 
 
@@ -450,7 +450,7 @@ class LinksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "Link",
+            '204': None,
             '404': "DomainGet404Response",
             '401': "DomainGet401Response",
             '422': "DomainGet422Response",
@@ -520,7 +520,7 @@ class LinksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "Link",
+            '204': None,
             '404': "DomainGet404Response",
             '401': "DomainGet401Response",
             '422': "DomainGet422Response",
@@ -569,7 +569,6 @@ class LinksApi:
         if 'Accept' not in _header_params:
             _header_params['Accept'] = self.api_client.select_header_accept(
                 [
-                    'application/json', 
                     'application/problem+json'
                 ]
             )
@@ -1168,7 +1167,6 @@ class LinksApi:
     @validate_call
     def link_list(
         self,
-        workspace_id: Annotated[Optional[UUID], Field(description="Filter by Workspace API ID")] = None,
         folder_id: Annotated[Optional[UUID], Field(description="Filter by Folder API ID")] = None,
         tag_id: Annotated[Optional[UUID], Field(description="Filter by Tag API ID")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=50, strict=True, ge=1)]], Field(description="Number of items per page")] = None,
@@ -1189,8 +1187,6 @@ class LinksApi:
         """List links
 
 
-        :param workspace_id: Filter by Workspace API ID
-        :type workspace_id: UUID
         :param folder_id: Filter by Folder API ID
         :type folder_id: UUID
         :param tag_id: Filter by Tag API ID
@@ -1222,7 +1218,6 @@ class LinksApi:
         """ # noqa: E501
 
         _param = self._link_list_serialize(
-            workspace_id=workspace_id,
             folder_id=folder_id,
             tag_id=tag_id,
             limit=limit,
@@ -1253,7 +1248,6 @@ class LinksApi:
     @validate_call
     def link_list_with_http_info(
         self,
-        workspace_id: Annotated[Optional[UUID], Field(description="Filter by Workspace API ID")] = None,
         folder_id: Annotated[Optional[UUID], Field(description="Filter by Folder API ID")] = None,
         tag_id: Annotated[Optional[UUID], Field(description="Filter by Tag API ID")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=50, strict=True, ge=1)]], Field(description="Number of items per page")] = None,
@@ -1274,8 +1268,6 @@ class LinksApi:
         """List links
 
 
-        :param workspace_id: Filter by Workspace API ID
-        :type workspace_id: UUID
         :param folder_id: Filter by Folder API ID
         :type folder_id: UUID
         :param tag_id: Filter by Tag API ID
@@ -1307,7 +1299,6 @@ class LinksApi:
         """ # noqa: E501
 
         _param = self._link_list_serialize(
-            workspace_id=workspace_id,
             folder_id=folder_id,
             tag_id=tag_id,
             limit=limit,
@@ -1338,7 +1329,6 @@ class LinksApi:
     @validate_call
     def link_list_without_preload_content(
         self,
-        workspace_id: Annotated[Optional[UUID], Field(description="Filter by Workspace API ID")] = None,
         folder_id: Annotated[Optional[UUID], Field(description="Filter by Folder API ID")] = None,
         tag_id: Annotated[Optional[UUID], Field(description="Filter by Tag API ID")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=50, strict=True, ge=1)]], Field(description="Number of items per page")] = None,
@@ -1359,8 +1349,6 @@ class LinksApi:
         """List links
 
 
-        :param workspace_id: Filter by Workspace API ID
-        :type workspace_id: UUID
         :param folder_id: Filter by Folder API ID
         :type folder_id: UUID
         :param tag_id: Filter by Tag API ID
@@ -1392,7 +1380,6 @@ class LinksApi:
         """ # noqa: E501
 
         _param = self._link_list_serialize(
-            workspace_id=workspace_id,
             folder_id=folder_id,
             tag_id=tag_id,
             limit=limit,
@@ -1418,7 +1405,6 @@ class LinksApi:
 
     def _link_list_serialize(
         self,
-        workspace_id,
         folder_id,
         tag_id,
         limit,
@@ -1445,10 +1431,6 @@ class LinksApi:
 
         # process the path parameters
         # process the query parameters
-        if workspace_id is not None:
-            
-            _query_params.append(('workspace_id', workspace_id))
-            
         if folder_id is not None:
             
             _query_params.append(('folder_id', folder_id))

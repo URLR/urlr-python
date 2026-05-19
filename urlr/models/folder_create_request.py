@@ -30,11 +30,10 @@ class FolderCreateRequest(BaseModel):
     """
     FolderCreateRequest
     """ # noqa: E501
-    workspace_id: UUID = Field(description="Workspace API ID")
     name: Annotated[str, Field(strict=True, max_length=255)] = Field(description="Name")
     parent_id: Optional[UUID] = Field(default=None, description="Folder API ID")
     color: Optional[StrictStr] = Field(default=None, description="Color of folder")
-    __properties: ClassVar[List[str]] = ["workspace_id", "name", "parent_id", "color"]
+    __properties: ClassVar[List[str]] = ["name", "parent_id", "color"]
 
     @field_validator('color')
     def color_validate_enum(cls, value):
@@ -97,7 +96,6 @@ class FolderCreateRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "workspace_id": obj.get("workspace_id"),
             "name": obj.get("name"),
             "parent_id": obj.get("parent_id"),
             "color": obj.get("color")

@@ -332,6 +332,7 @@ Name | Type | Description  | Notes
 **404** | Not Found |  -  |
 **401** | Unauthorized |  -  |
 **422** | Validation Failed |  -  |
+**500** | Internal Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -418,6 +419,7 @@ Name | Type | Description  | Notes
 **422** | Validation Failed |  -  |
 **404** | Not Found |  -  |
 **401** | Unauthorized |  -  |
+**500** | Internal Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -9,6 +9,7 @@ docs/DomainCreateRequest.md
 docs/DomainGet401Response.md
 docs/DomainGet404Response.md
 docs/DomainGet422Response.md
+docs/DomainGet500Response.md
 docs/DomainList200Response.md
 docs/DomainsApi.md
 docs/Folder.md
@@ -20,7 +21,6 @@ docs/LinkBaseRequest.md
 docs/LinkBaseRequestMetatag.md
 docs/LinkBaseRequestQrcode.md
 docs/LinkCreateRequest.md
-docs/LinkDelete500Response.md
 docs/LinkEditRequest.md
 docs/LinkGeolinksInner.md
 docs/LinkGeolinksInnerConditionsInner.md
@@ -49,6 +49,7 @@ test/test_domain_create_request.py
 test/test_domain_get401_response.py
 test/test_domain_get404_response.py
 test/test_domain_get422_response.py
+test/test_domain_get500_response.py
 test/test_domain_list200_response.py
 test/test_domains_api.py
 test/test_folder.py
@@ -60,7 +61,6 @@ test/test_link_base_request.py
 test/test_link_base_request_metatag.py
 test/test_link_base_request_qrcode.py
 test/test_link_create_request.py
-test/test_link_delete500_response.py
 test/test_link_edit_request.py
 test/test_link_geolinks_inner.py
 test/test_link_geolinks_inner_conditions_inner.py
@@ -96,6 +96,7 @@ urlr/models/domain_create_request.py
 urlr/models/domain_get401_response.py
 urlr/models/domain_get404_response.py
 urlr/models/domain_get422_response.py
+urlr/models/domain_get500_response.py
 urlr/models/domain_list200_response.py
 urlr/models/folder.py
 urlr/models/folder_create_request.py
@@ -105,7 +106,6 @@ urlr/models/link_base_request.py
 urlr/models/link_base_request_metatag.py
 urlr/models/link_base_request_qrcode.py
 urlr/models/link_create_request.py
-urlr/models/link_delete500_response.py
 urlr/models/link_edit_request.py
 urlr/models/link_geolinks_inner.py
 urlr/models/link_geolinks_inner_conditions_inner.py

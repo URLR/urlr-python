@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **medium** | **str** | utm_medium | [optional] 
 **source** | **str** | utm_source | [optional] 
 **content** | **str** | utm_content | [optional] 
+**campaign_id** | **str** | utm_id | [optional] 
+**term** | **str** | utm_term | [optional] 
 
 ## Example
 

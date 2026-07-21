@@ -1,5 +1,10 @@
 # Changelog
 
+## [3.2.0] - 2026-07-20
+
+- Updated URLR API version to 2.1.0
+- Updated to OpenAPI Generator 7.24.0
+
 ## [3.1.0] - 2026-05-19
 
 - Adapt to workspace_id field removal. Not a breaking change because API V2 is still not officially used.

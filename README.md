@@ -1,11 +1,11 @@
-# urlr@3.1.0
+# urlr@3.2.0
 
 ![PyPI - Version](https://img.shields.io/pypi/v/urlr) ![PyPI - Downloads](https://img.shields.io/pypi/dm/urlr) ![PyPI - License](https://img.shields.io/pypi/l/urlr)
 
 This SDK is automatically generated with the [OpenAPI Generator](https://openapi-generator.tech) project.
 
-- API version: 2.0.0
-- Package version: 3.1.0
+- API version: 2.1.0
+- Package version: 3.2.0
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 
 For more information, please visit [https://urlr.me/en](https://urlr.me/en)
@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
  - [DomainGet401Response](docs/DomainGet401Response.md)
  - [DomainGet404Response](docs/DomainGet404Response.md)
  - [DomainGet422Response](docs/DomainGet422Response.md)
+ - [DomainGet500Response](docs/DomainGet500Response.md)
  - [DomainList200Response](docs/DomainList200Response.md)
  - [Folder](docs/Folder.md)
  - [FolderCreateRequest](docs/FolderCreateRequest.md)
@@ -113,7 +114,6 @@ Class | Method | HTTP request | Description
  - [LinkBaseRequestMetatag](docs/LinkBaseRequestMetatag.md)
  - [LinkBaseRequestQrcode](docs/LinkBaseRequestQrcode.md)
  - [LinkCreateRequest](docs/LinkCreateRequest.md)
- - [LinkDelete500Response](docs/LinkDelete500Response.md)
  - [LinkEditRequest](docs/LinkEditRequest.md)
  - [LinkGeolinksInner](docs/LinkGeolinksInner.md)
  - [LinkGeolinksInnerConditionsInner](docs/LinkGeolinksInnerConditionsInner.md)

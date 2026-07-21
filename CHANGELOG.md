@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.2.2] - 2026-07-21
+
+- Fix git user typo
+
 ## [3.2.1] - 2026-07-21
 
 - Fix changelog
